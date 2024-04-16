@@ -1,0 +1,5628 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#callBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.dfx {
+  display: flex;
+}
+
+
+#phoneButton {
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgb(248, 204, 11);
+  color: white;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  opacity: 45%;
+}
+
+#phoneButton:hover {
+  opacity: 100%;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+/* Стили для скроллбара */
+::-webkit-scrollbar {
+  width: 10px; /* Ширина скроллбара */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Цвет фона трека */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(248, 204, 11); /* Цвет скроллбара */
+  border-radius: 5px; /* Скругление углов */
+}
+
+/* Кнопка увеличения/уменьшения */
+::-webkit-scrollbar-button {
+  display: none; /* Скрыть кнопку */
+}
+
+/* Скрываем скроллбар в Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(248, 204, 11) #f1f1f1; /* Цвет скроллбара и трека */
+}
+
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #007bff;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.nav-links li:last-child {
+  margin-right: 0;
+}
+
+.call-button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media screen and (min-width: 501px) and (max-width: 641px) {
+
+  .logo {
+    width: 40%;
+    height: auto;
+  }
+
+
+  header {
+    background: rgb(248, 204, 11);
+
+
+    nav {
+      opacity: 90%;
+      display: flex;
+      width: 100%;
+      background: rgb(248, 204, 11);
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+
+      img {
+        width: 144px;
+        height: 53px;
+      }
+
+      p {
+        font-size: 5vw;
+        color: rgb(12, 30, 52);
+        font-family: sans-serif;
+        font-weight: 700;
+        line-height: 33px;
+        letter-spacing: 0;
+        text-align: left;
+      }
+    }
+
+    .image-container {
+      width: 100%; /* Ширина контейнера занимает 100% от родителя */
+      height: 367px; /* Фиксированная высота контейнера */
+      overflow: hidden; /* Обрезает изображение, которое выходит за границы контейнера */
+
+      img {
+        width: 100%; /* Ширина изображения автоматически рассчитывается для сохранения пропорций */
+        height: 100%; /* Высота изображения занимает 100% высоты родительского контейнера */
+        display: block; /* Убирает лишние пробелы вокруг изображения */
+        object-fit: cover; /* Масштабирование изображения для заполнения контейнера без искажений */
+      }
+    }
+
+    h1 {
+      width: 89%;
+      margin-left: 15px;
+      margin-top: 48px;
+      color: rgb(255, 255, 255);
+      font-family: sans-serif;
+      font-size: 9.7vw;
+      font-weight: 600;
+      line-height: 143%;
+      letter-spacing: 0;
+      text-align: left;
+    }
+
+    .header_components {
+      width: 1%;
+      display: flex;
+
+      .hr {
+        margin-left: 3%;
+        display: flex;
+        margin-top: 50px;
+
+        hr {
+          /* Rectangle */
+          width: 1px;
+          height: 90.39px;
+          border: 0;
+          background: rgb(239, 245, 255);
+        }
+
+        .hr2 {
+          /* Rectangle */
+          width: 1px;
+          height: 66.39px;
+          border: 0;
+          background: rgb(239, 245, 255);
+        }
+
+        .solve {
+          margin-left: 9%;
+          width: 136px;
+
+
+          h2 {
+            color: rgb(255, 255, 255);
+            font-family: sans-serif;
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 38.4px;
+            letter-spacing: 0;
+            text-align: left;
+          }
+
+          h3 {
+            width: 85%;
+            color: rgb(239, 245, 255);
+            font-family: sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0;
+            text-align: left;
+            margin-top: 5px;
+          }
+
+          button {
+            width: 171px;
+            height: 57px;
+            margin-top: 16px;
+            margin-left: -25px;
+            box-sizing: border-box;
+            border: 1px solid rgb(252, 255, 101);
+            border-radius: 800px;
+            background: rgb(255, 255, 255);
+            color: rgb(206, 210, 0);
+            font-family: Open Sans;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 22.5px;
+            letter-spacing: 0;
+            text-align: center;
+            margin-bottom: 90px;
+
+          }
+        }
+      }
+    }
+
+  }
+
+  section {
+    width: 100%;
+
+    .nas {
+
+      .df_elements {
+        display: block;
+
+        .img1 {
+          border-radius: 23px;
+          width: 71%;
+          height: 35%;
+          margin-left: 1%;
+          z-index: 1;
+          margin-top: 32px;
+        }
+
+        .img2 {
+          border: 15px solid white;
+          border-radius: 23px;
+          width: 61%;
+          height: 0%;
+          margin-left: 39%;
+          margin-top: -230px;
+        }
+
+        .section__items {
+          margin-left: 10%;
+          margin-top: 20px;
+
+          .about {
+            font-size: 3vw;
+            box-sizing: border-box;
+            border: 1px solid rgb(248, 204, 11);
+            border-radius: 800px;
+            width: 92px;
+            height: 34px;
+            background: transparent;
+            color: rgb(248, 204, 11);
+            font-family: sans-serif;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: center;
+          }
+
+          h2 {
+            font-size: 7vw;
+            width: 90%;
+            margin-top: 2%;
+            color: rgb(248, 204, 11);
+            font-family: sans-serif;
+            line-height: 123%;
+            letter-spacing: 0;
+            text-align: left;
+          }
+
+          h3 {
+            margin-top: 2%;
+            color: rgb(141, 142, 146);
+            font-family: Open Sans;
+            font-size: 2.8vw;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0;
+            text-align: left;
+            width: 77%;
+          }
+
+          .items {
+            margin-top: 23px;
+
+            .item {
+              gap: 15px;
+              margin-top: 2%;
+              display: flex;
+              color: rgb(141, 142, 146);
+              font-family: Open Sans;
+              font-size: 16px;
+              text-align: left;
+
+              p {
+                font-size: 2.5vw;
+                margin-top: 2px;
+              }
+            }
+
+            button {
+              font-size: 2.4vw;
+              box-sizing: border-box;
+              border: 1px solid rgb(248, 204, 11);
+              border-radius: 21px;
+              background: rgb(248, 204, 11);
+              width: 28%;
+              margin-top: 4%;
+              color: rgb(255, 255, 255);
+              font-family: Open Sans;
+              font-weight: 600;
+              line-height: 24px;
+              letter-spacing: 0;
+              text-align: center;
+              height: 53px;
+            }
+
+
+          }
+        }
+      }
+
+    }
+
+    .uslugi {
+      margin-top: 55px;
+      width: 100%;
+
+      .centerr {
+        justify-content: center;
+        display: flex;
+
+        button {
+          box-sizing: border-box;
+          border: 1px solid rgb(248, 204, 11);
+          border-radius: 800px;
+          width: 101px;
+          height: 34px;
+          background: transparent;
+
+          color: rgb(248, 204, 11);
+          font-family: Open Sans;
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: 0;
+          text-align: center;
+        }
+
+        .h2 {
+          margin-top: 15px;
+          color: rgb(248, 204, 11);
+          font-family: sans-serif;
+          font-size: 40px;
+          font-weight: 600;
+          line-height: 48px;
+          letter-spacing: 0;
+          text-align: center;
+        }
+      }
+
+      .center {
+        justify-content: center;
+
+        .df {
+          margin-top: 50px;
+          justify-content: center;
+          align-items: center;
+          display: block;
+          gap: 3%;
+
+          .center {
+            display: flex;
+            justify-content: center;
+
+            .card {
+              margin-top: 15px;
+              width: 93%;
+              border-radius: 8px;
+              background: rgb(239, 245, 255);
+
+              .button {
+                width: 108px;
+                height: 108px;
+                background: white;
+                margin-top: 58px;
+                margin-left: 48px;
+                border: 0;
+                border-radius: 50%;
+
+                .ava {
+                  width: 50px;
+                  height: 50px;
+                }
+              }
+
+              h2 {
+                width: 80%;
+                margin-top: 14px;
+                margin-left: 48px;
+                color: rgb(248, 204, 11);
+                font-family: sans-serif;
+                font-size: 34px;
+                font-weight: 400;
+                line-height: 28.8px;
+                letter-spacing: 0;
+                text-align: left;
+              }
+
+              h3 {
+                width: 80%;
+                margin-left: 48px;
+                margin-top: 17px;
+                color: rgb(141, 142, 146);
+                font-family: Open Sans;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: 0;
+                text-align: left;
+              }
+
+              button {
+                margin-left: 48px;
+                margin-top: 35px;
+                width: 40px;
+                height: 40px;
+                border-radius: 50px;
+                border: 0;
+                margin-bottom: 20px;
+
+
+                img {
+                  width: 23px;
+                  height: 23px;
+                }
+              }
+            }
+          }
+        }
+
+        .card4 {
+          margin-top: 15px;
+          width: 93%;
+          height: 460px;
+          border-radius: 8px;
+          background: rgb(239, 245, 255);
+
+          .button {
+            width: 108px;
+            height: 108px;
+            background: white;
+            margin-top: 58px;
+            margin-left: 48px;
+            border: 0;
+            border-radius: 50%;
+
+            .ava {
+              width: 50px;
+              height: 50px;
+            }
+          }
+
+          h2 {
+            width: 80%;
+            margin-top: 14px;
+            margin-left: 48px;
+            color: rgb(248, 204, 11);
+            font-family: sans-serif;
+            font-size: 34px;
+            font-weight: 400;
+            line-height: 28.8px;
+            letter-spacing: 0;
+            text-align: left;
+          }
+
+          h3 {
+            width: 80%;
+            margin-left: 48px;
+            margin-top: 17px;
+            color: rgb(141, 142, 146);
+            font-family: Open Sans;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0;
+            text-align: left;
+          }
+
+          button {
+            margin-left: 48px;
+            margin-top: 35px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50px;
+            border: 0;
+
+            img {
+              width: 23px;
+              height: 23px;
+            }
+          }
+        }
+
+        .button {
+          width: 65px;
+          height: 65px;
+          background: white;
+          margin-top: 10px;
+          margin-left: 48px;
+          border: 0;
+          border-radius: 50px;
+
+          .ava {
+            width: 40px;
+            height: 40px;
+          }
+        }
+
+        h2 {
+          margin-top: 14px;
+          margin-left: 48px;
+          color: rgb(248, 204, 11);
+          font-family: sans-serif;
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 28.8px;
+          letter-spacing: 0;
+          text-align: left;
+        }
+
+        h3 {
+          margin-left: 48px;
+          margin-top: 17px;
+          color: rgb(141, 142, 146);
+          font-family: Open Sans;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: 0;
+          text-align: left;
+          width: 80%;
+        }
+
+        button {
+          margin-left: 48px;
+          margin-top: 35px;
+          width: 40px;
+          height: 40px;
+          border-radius: 50px;
+          border: 0;
+
+          img {
+            width: 17px;
+            height: 17px;
+          }
+        }
+      }
+
+      .cen {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .why {
+      height: 700px;
+      margin-top: 95px;
+      width: 100%;
+      display: flex;
+
+      .left {
+        background: rgb(248, 204, 11);
+
+        .why_item {
+          margin-top: 40px;
+          margin-left: 10%;
+          width: 104%;
+
+
+          .but {
+            width: 217px;
+            height: 34px;
+            box-sizing: border-box;
+            border: 2px solid white;
+            border-radius: 800px;
+            background: transparent;
+
+            color: rgb(239, 245, 255);
+            font-family: Open Sans;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0;
+            text-align: center;
+          }
+
+          h2 {
+            width: 88%;
+            color: rgb(255, 255, 255);
+            font-family: sans-serif;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 48px;
+            letter-spacing: 0;
+            text-align: left;
+            margin-top: 16px;
+          }
+
+          h3 {
+            width: 84%;
+            color: rgb(255, 255, 255);
+            font-family: Open Sans;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0;
+            text-align: left;
+          }
+
+          .achievements {
+            width: 88%;
+            margin-top: 31px;
+
+            .df1 {
+              display: block;
+
+              .item1 {
+                display: flex;
+                align-items: center;
+
+                button {
+                  width: 55px;
+                  height: 55px;
+                  background: white;
+                  border: 0;
+                  border-radius: 50px;
+
+                  img {
+                    width: 41px;
+                    height: 41px;
+                  }
+                }
+
+                p {
+                  width: 100px;
+                  color: rgb(255, 255, 255);
+                  font-family: sans-serif;
+                  font-size: 20px;
+                  font-weight: 400;
+                  line-height: 24px;
+                  text-align: left;
+                  margin-left: 24px;
+                }
+
+
+              }
+
+              .item2 {
+                align-items: center;
+                margin-top: 15px;
+                display: flex;
+
+                button {
+                  width: 55px;
+                  height: 55px;
+                  background: white;
+                  border: 0;
+                  border-radius: 50px;
+
+                  img {
+                    border: 0;
+                    width: 41px;
+                    height: 41px;
+                  }
+                }
+
+                p {
+                  color: rgb(255, 255, 255);
+                  font-family: sans-serif;
+                  font-size: 20px;
+                  font-weight: 400;
+                  line-height: 24px;
+                  text-align: left;
+                  margin-left: 24px;
+                }
+
+
+              }
+            }
+
+            .df2 {
+              margin-top: 15px;
+
+              .item1 {
+                display: flex;
+                align-items: center;
+
+                button {
+                  width: 55px;
+                  height: 55px;
+                  background: white;
+                  border: 0;
+                  border-radius: 50px;
+
+                  img {
+                    width: 41px;
+                    height: 41px;
+                  }
+                }
+
+                p {
+                  width: 100px;
+                  color: rgb(255, 255, 255);
+                  font-family: sans-serif;
+                  font-size: 20px;
+                  font-weight: 400;
+                  line-height: 24px;
+                  text-align: left;
+                  margin-left: 24px;
+                }
+
+
+              }
+
+              .item2 {
+                margin-top: 15px;
+                display: flex;
+                align-items: center;
+
+                button {
+                  width: 55px;
+                  height: 55px;
+                  background: white;
+                  border: 0;
+                  border-radius: 50px;
+
+                  img {
+                    width: 41px;
+                    height: 41px;
+                    margin-bottom: 15px;
+                  }
+                }
+
+                p {
+                  color: rgb(255, 255, 255);
+                  font-family: sans-serif;
+                  font-size: 20px;
+                  font-weight: 400;
+                  line-height: 24px;
+                  text-align: left;
+                  margin-left: 24px;
+                }
+              }
+            }
+          }
+        }
+
+
+      }
+
+      .image-container {
+        width: 100%; /* Ширина контейнера занимает 100% от родителя */
+        height: 700px;; /* Фиксированная высота контейнера */
+        overflow: hidden; /* Обрезает изображение, которое выходит за границы контейнера */
+
+        img {
+          width: 929px; /* Ширина изображения автоматически рассчитывается для сохранения пропорций */
+          height: 100%; /* Высота изображения занимает 100% высоты родительского контейнера */
+          display: block; /* Убирает лишние пробелы вокруг изображения */
+          object-fit: cover; /* Масштабирование изображения для заполнения контейнера без искажений */
+        }
+      }
+    }
+
+    .centere {
+      display: flex;
+      justify-content: center;
+
+      .relationship {
+
+        gap: 1%;
+        width: 100%;
+        display: block;
+        justify-content: center;
+        max-width: 990px;
+
+
+        .relation_left {
+          width: 99%;
+          margin-top: 95px;
+          margin-left: 1%;
+
+          .center {
+            justify-content: center;
+            display: flex;
+
+            button {
+              box-sizing: border-box;
+              border: 1px solid rgb(199, 220, 251);
+              border-radius: 800px;
+
+              color: rgb(141, 142, 146);
+              font-family: Open Sans;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 24px;
+              letter-spacing: 0;
+              text-align: center;
+              width: 129px;
+              height: 34px;
+              background: transparent;
+            }
+          }
+
+          h2 {
+            color: rgb(27, 44, 81);
+            font-family: sans-serif;
+            font-size: 7vw;
+            font-weight: 400;
+            line-height: 48px;
+            letter-spacing: 0;
+            text-align: left;
+            margin-top: 30px;
+          }
+        }
+
+        h3 {
+          display: none;
+        }
+
+        .center {
+          justify-content: center;
+          display: flex;
+
+          .rel1 {
+            gap: 10%;
+            margin-top: 73px;
+            width: 95%;
+            height: 152px;
+            border-radius: 8px;
+            background: rgb(239, 245, 255);
+            display: flex;
+            align-items: center;
+
+
+            button {
+              border-radius: 50%;
+              width: 55px;
+              height: 55px;
+              background: white;
+              border: 0;
+              margin-left: 100%;
+
+              img {
+                width: 17px;
+                height: 17px;
+              }
+            }
+
+            .item1 {
+              margin-left: 11%;
+              width: 50%;
+
+
+              p {
+                color: rgb(141, 142, 146);
+                font-family: Open Sans;
+                font-size: 3vw;
+                font-weight: 400;
+                text-align: left;
+              }
+
+              h2 {
+                color: rgb(27, 44, 81);
+                font-family: sans-serif;
+                font-size: 3.5vw;
+                font-weight: 400;
+                text-align: left;
+                margin-top: 0;
+              }
+            }
+          }
+        }
+
+        .center {
+          justify-content: center;
+          display: flex;
+
+          .rel2 {
+            gap: 10%;
+            margin-top: 23px;
+            width: 95%;
+            height: 152px;
+            border-radius: 8px;
+            background: rgb(239, 245, 255);
+            display: flex;
+            align-items: center;
+
+
+            button {
+              border-radius: 50%;
+              width: 55px;
+              height: 55px;
+              background: white;
+              border: 0;
+              margin-left: 100%;
+
+              img {
+                width: 17px;
+                height: 17px;
+              }
+            }
+
+            .item1 {
+              margin-left: 11%;
+              width: 50%;
+
+
+              p {
+                width: 101%;
+                color: rgb(141, 142, 146);
+                font-family: Open Sans;
+                font-size: 3vw;
+                font-weight: 400;
+                text-align: left;
+              }
+
+              h2 {
+                color: rgb(27, 44, 81);
+                font-family: sans-serif;
+                font-size: 3.5vw;
+                font-weight: 400;
+                text-align: left;
+                margin-top: 0;
+              }
+            }
+          }
+        }
+
+
+        .relation_right {
+          margin-right: 1%;
+          margin-top: 95px;
+          width: 100%;
+          border-radius: 8px;
+          background: rgb(239, 245, 255);
+          height: 473px;
+
+          .center {
+            display: flex;
+            justify-content: center;
+
+            h2 {
+              font-family: sans-serif;
+              font-size: 8vw;
+              font-weight: 400;
+              line-height: 48px;
+              letter-spacing: 0;
+              text-align: left;
+              margin-top: 51px;
+              color: rgb(248, 204, 11);
+            }
+
+            h3 {
+              font-size: 2.6vw;
+              margin-top: 30px;
+              color: rgb(141, 142, 146);
+              display: block;
+              font-family: Open Sans;
+              font-weight: 400;
+              line-height: 24px;
+              text-align: center;
+              width: 87%;
+            }
+          }
+
+          .df {
+
+            display: flex;
+            justify-content: center;
+            gap: 1%;
+            margin-top: 47px;
+
+            .input {
+              margin-left: 7%;
+              width: 50%;
+              height: 55px;
+              box-sizing: border-box;
+              border: 1.6px solid rgb(238, 238, 238);
+              border-radius: 12px;
+              text-align: left;
+              padding: 12px 43px;
+              color: black;
+              font-family: sans-serif;
+              font-size: 16px;
+            }
+
+            .container {
+              width: 60%;
+
+              .iti--allow-dropdown {
+                width: 100%;
+
+                .input2 {
+                  width: 85%;
+                  height: 55px;
+                  box-sizing: border-box;
+                  border: 1.6px solid rgb(238, 238, 238);
+                  border-radius: 12px;
+                  text-align: left;
+                  padding: 12px 43px;
+                  color: black;
+                  font-family: sans-serif;
+                  font-size: 16px;
+                }
+              }
+
+              .input::placeholder {
+                color: rgba(51, 51, 51, 0.4);
+                font-family: sans-serif;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 16px;
+                text-align: left;
+              }
+            }
+          }
+
+          .center {
+            display: flex;
+            justify-content: center;
+
+            button {
+              margin-top: 15px;
+              width: 87%;
+              box-sizing: border-box;
+              border: 1px solid rgb(248, 204, 11);
+              border-radius: 8px;
+
+              background: rgb(248, 204, 11);
+              height: 58px;
+
+              color: rgb(255, 255, 255);
+              font-family: Open Sans;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 24px;
+              text-align: center;
+            }
+          }
+
+        }
+      }
+
+
+    }
+
+  }
+
+  footer {
+    width: 100%;
+    background: rgb(196, 160, 7);
+
+    .df1 {
+      display: flex;
+      gap: 10%;
+      padding-top: 96px;
+      margin-left: 10%;
+
+      .item1 {
+        width: 50%;
+
+        .zag {
+          color: rgb(239, 245, 255);
+          font-family: sans-serif;
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 24px;
+          letter-spacing: 0;
+          text-align: left;
+          margin-bottom: 24px;
+        }
+
+        .df {
+          display: flex;
+          margin-top: 8px;
+
+          .one {
+            margin-left: 5px;
+          }
+
+          svg {
+            width: 21px;
+            height: 21px;
+          }
+
+
+          p {
+            color: rgb(239, 245, 255);
+            font-family: Open Sans;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0;
+            text-align: left;
+            gap: 16px;
+            margin-left: 10px;
+          }
+        }
+
+        .dff {
+          margin-top: 23px;
+          display: flex;
+          gap: 5px;
+
+          .lg {
+            box-sizing: border-box;
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 50px;
+            background: transparent;
+            width: 35px;
+            height: 35px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+
+          }
+
+        }
+      }
+
+      .item2 {
+        width: 30%;
+
+        h2 {
+          color: rgb(239, 245, 255);
+          font-family: sans-serif;
+          font-size: 19px;
+          font-weight: 600;
+          line-height: 24px;
+          letter-spacing: 0;
+          text-align: left;
+          margin-bottom: 25px;
+        }
+
+        .df {
+          display: flex;
+          gap: 7px;
+          margin-top: 7px;
+
+          p {
+            color: rgb(255, 255, 255);
+            font-family: Open Sans;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 22.5px;
+            letter-spacing: 0;
+            text-align: left;
+            text-transform: capitalize;
+            margin-top: -5px;
+          }
+        }
+      }
+
+      .item3 {
+        display: none;
+      }
+
+    }
+
+    .center {
+      display: flex;
+      justify-content: center;
+
+      hr {
+        width: 72.5%;
+        height: 1px;
+        background: white;
+        border: 0;
+        margin-top: 80px;
+      }
+    }
+
+    .df2 {
+      gap: 10%;
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 10px;
+
+      p {
+        font-size: 2.5vw;
+        color: rgb(0, 0, 0);
+        font-family: Open Sans;
+        font-weight: 400;
+        line-height: 22.5px;
+        letter-spacing: 0;
+        text-align: left;
+
+        span {
+          color: white;
+        }
+
+        .name {
+          color: white;
+        }
+      }
+
+      .design {
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+
+  .logo {
+    width: 40%;
+    height: auto;
+  }
+
+
+  header {
+    background: rgb(248, 204, 11);
+
+
+    nav {
+      display: flex;
+      opacity: 90%;
+      width: 100%;
+      background: rgb(248, 204, 11);
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+
+      img {
+        width: 144px;
+        height: 53px;
+      }
+
+      p {
+        font-size: 5vw;
+        color: rgb(12, 30, 52);
+        font-family: sans-serif;
+        font-weight: 700;
+        line-height: 33px;
+        letter-spacing: 0;
+        text-align: left;
+      }
+    }
+
+    .image-container {
+      height: 295px;
+      width: 100%; /* Ширина контейнера занимает 100% от родителя */
+      overflow: hidden; /* Обрезает изображение, которое выходит за границы контейнера */
+
+      img {
+        width: 100%; /* Ширина изображения автоматически рассчитывается для сохранения пропорций */
+        height: 100%; /* Высота изображения занимает 100% высоты родительского контейнера */
+        display: block; /* Убирает лишние пробелы вокруг изображения */
+        object-fit: cover; /* Масштабирование изображения для заполнения контейнера без искажений */
+      }
+    }
+
+    h1 {
+      width: 89%;
+      margin-left: 15px;
+      margin-top: 48px;
+      color: rgb(255, 255, 255);
+      font-family: sans-serif;
+      font-size: 9.7vw;
+      font-weight: 600;
+      line-height: 143%;
+      letter-spacing: 0;
+      text-align: left;
+    }
+
+    .header_components {
+      display: block;
+
+      .hr {
+        margin-left: 3%;
+        display: flex;
+        margin-top: 50px;
+
+        hr {
+          /* Rectangle */
+          width: 1px;
+          height: 90.39px;
+          border: 0;
+          background: rgb(239, 245, 255);
+        }
+
+        .hr2 {
+          /* Rectangle */
+          width: 1px;
+          height: 66.39px;
+          border: 0;
+          background: rgb(239, 245, 255);
+        }
+
+        .solve {
+          width: 183px;
+          margin-left: 14%;
+
+          h2 {
+            color: rgb(255, 255, 255);
+            font-family: sans-serif;
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 38.4px;
+            letter-spacing: 0;
+            text-align: left;
+          }
+
+          h3 {
+            width: 85%;
+            color: rgb(239, 245, 255);
+            font-family: sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0;
+            text-align: left;
+            margin-top: 5px;
+          }
+
+          button {
+            width: 171px;
+            height: 57px;
+            margin-top: 16px;
+            margin-left: -25px;
+            box-sizing: border-box;
+            border: 1px solid rgb(252, 255, 101);
+            border-radius: 800px;
+            background: rgb(255, 255, 255);
+            color: rgb(206, 210, 0);
+            font-family: Open Sans;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 22.5px;
+            letter-spacing: 0;
+            text-align: center;
+            margin-bottom: 90px;
+
+          }
+        }
+      }
+    }
+
+  }
+
+  section {
+    width: 100%;
+
+    .nas {
+
+      .df_elements {
+        display: block;
+
+        .img1 {
+          border-radius: 23px;
+          width: 71%;
+          height: 35%;
+          margin-left: 1%;
+          z-index: 1;
+          margin-top: 32px;
+        }
+
+        .img2 {
+          border: 15px solid white;
+          border-radius: 23px;
+          width: 61%;
+          height: 0%;
+          margin-left: 39%;
+          margin-top: -230px;
+        }
+
+        .section__items {
+          margin-left: 10%;
+          margin-top: 20px;
+
+          .about {
+            font-size: 3vw;
+            box-sizing: border-box;
+            border: 1px solid rgb(248, 204, 11);
+            border-radius: 800px;
+            width: 92px;
+            height: 34px;
+            background: transparent;
+            color: rgb(248, 204, 11);
+            font-family: sans-serif;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: center;
+          }
+
+          h2 {
+            font-size: 7vw;
+            width: 90%;
+            margin-top: 2%;
+            color: rgb(248, 204, 11);
+            font-family: sans-serif;
+            line-height: 123%;
+            letter-spacing: 0;
+            text-align: left;
+          }
+
+          h3 {
+            margin-top: 2%;
+            color: rgb(141, 142, 146);
+            font-family: Open Sans;
+            font-size: 2.8vw;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0;
+            text-align: left;
+            width: 77%;
+          }
+
+          .items {
+            margin-top: 23px;
+
+            .item {
+              gap: 15px;
+              margin-top: 2%;
+              display: flex;
+              color: rgb(141, 142, 146);
+              font-family: Open Sans;
+              font-size: 16px;
+              text-align: left;
+
+              p {
+                font-size: 2.5vw;
+                margin-top: 2px;
+              }
+            }
+
+            button {
+              font-size: 2.4vw;
+              box-sizing: border-box;
+              border: 1px solid rgb(248, 204, 11);
+              border-radius: 21px;
+              background: rgb(248, 204, 11);
+              width: 28%;
+              height: 42px;
+              margin-top: 4%;
+              color: rgb(255, 255, 255);
+              font-family: Open Sans;
+              font-weight: 600;
+              line-height: 24px;
+              letter-spacing: 0;
+              text-align: center;
+            }
+
+
+          }
+        }
+      }
+
+    }
+
+    .uslugi {
+      margin-top: 55px;
+      width: 100%;
+
+      .centerr {
+        justify-content: center;
+        display: flex;
+
+        button {
+          box-sizing: border-box;
+          border: 1px solid rgb(248, 204, 11);
+          border-radius: 800px;
+          width: 101px;
+          height: 34px;
+          background: transparent;
+
+          color: rgb(248, 204, 11);
+          font-family: Open Sans;
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: 0;
+          text-align: center;
+        }
+
+        .h2 {
+          margin-top: 15px;
+          color: rgb(248, 204, 11);
+          font-family: sans-serif;
+          font-size: 40px;
+          font-weight: 600;
+          line-height: 48px;
+          letter-spacing: 0;
+          text-align: center;
+        }
+      }
+
+      .center {
+        justify-content: center;
+
+        .df {
+          margin-top: 50px;
+          justify-content: center;
+          align-items: center;
+          display: block;
+          gap: 3%;
+
+          .center {
+            display: flex;
+            justify-content: center;
+
+            .card {
+              margin-top: 15px;
+              width: 93%;
+              border-radius: 8px;
+              background: rgb(239, 245, 255);
+
+              .button {
+                width: 108px;
+                height: 108px;
+                background: white;
+                margin-top: 58px;
+                margin-left: 48px;
+                border: 0;
+                border-radius: 50%;
+
+                .ava {
+                  width: 50px;
+                  height: 50px;
+                }
+              }
+
+              h2 {
+                width: 80%;
+                margin-top: 14px;
+                margin-left: 48px;
+                color: rgb(248, 204, 11);
+                font-family: sans-serif;
+                font-size: 34px;
+                font-weight: 400;
+                line-height: 28.8px;
+                letter-spacing: 0;
+                text-align: left;
+              }
+
+              h3 {
+                width: 80%;
+                margin-left: 48px;
+                margin-top: 17px;
+                color: rgb(141, 142, 146);
+                font-family: Open Sans;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: 0;
+                text-align: left;
+              }
+
+              button {
+                margin-left: 48px;
+                margin-top: 35px;
+                width: 40px;
+                height: 40px;
+                border-radius: 50px;
+                border: 0;
+                margin-bottom: 20px;
+
+
+                img {
+                  width: 23px;
+                  height: 23px;
+                }
+              }
+            }
+          }
+        }
+
+        .card4 {
+          margin-top: 15px;
+          width: 93%;
+          height: 460px;
+          border-radius: 8px;
+          background: rgb(239, 245, 255);
+
+          .button {
+            width: 108px;
+            height: 108px;
+            background: white;
+            margin-top: 58px;
+            margin-left: 48px;
+            border: 0;
+            border-radius: 50%;
+
+            .ava {
+              width: 50px;
+              height: 50px;
+            }
+          }
+
+          h2 {
+            width: 80%;
+            margin-top: 14px;
+            margin-left: 48px;
+            color: rgb(248, 204, 11);
+            font-family: sans-serif;
+            font-size: 34px;
+            font-weight: 400;
+            line-height: 28.8px;
+            letter-spacing: 0;
+            text-align: left;
+          }
+
+          h3 {
+            width: 80%;
+            margin-left: 48px;
+            margin-top: 17px;
+            color: rgb(141, 142, 146);
+            font-family: Open Sans;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0;
+            text-align: left;
+          }
+
+          button {
+            margin-left: 48px;
+            margin-top: 35px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50px;
+            border: 0;
+
+            img {
+              width: 23px;
+              height: 23px;
+            }
+          }
+        }
+
+        .button {
+          width: 65px;
+          height: 65px;
+          background: white;
+          margin-top: 10px;
+          margin-left: 48px;
+          border: 0;
+          border-radius: 50px;
+
+          .ava {
+            width: 40px;
+            height: 40px;
+          }
+        }
+
+        h2 {
+          margin-top: 14px;
+          margin-left: 48px;
+          color: rgb(248, 204, 11);
+          font-family: sans-serif;
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 28.8px;
+          letter-spacing: 0;
+          text-align: left;
+        }
+
+        h3 {
+          margin-left: 48px;
+          margin-top: 17px;
+          color: rgb(141, 142, 146);
+          font-family: Open Sans;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: 0;
+          text-align: left;
+          width: 80%;
+        }
+
+        button {
+          margin-left: 48px;
+          margin-top: 35px;
+          width: 40px;
+          height: 40px;
+          border-radius: 50px;
+          border: 0;
+
+          img {
+            width: 17px;
+            height: 17px;
+          }
+        }
+      }
+
+      .cen {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .why {
+      height: 700px;
+      margin-top: 95px;
+      width: 100%;
+      display: flex;
+
+      .left {
+        background: rgb(248, 204, 11);
+
+        .why_item {
+          margin-top: 40px;
+          margin-left: 10%;
+          width: 104%;
+
+
+          .but {
+            width: 217px;
+            height: 34px;
+            box-sizing: border-box;
+            border: 2px solid white;
+            border-radius: 800px;
+            background: transparent;
+
+            color: rgb(239, 245, 255);
+            font-family: Open Sans;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0;
+            text-align: center;
+          }
+
+          h2 {
+            width: 88%;
+            color: rgb(255, 255, 255);
+            font-family: sans-serif;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 48px;
+            letter-spacing: 0;
+            text-align: left;
+            margin-top: 16px;
+          }
+
+          h3 {
+            width: 84%;
+            color: rgb(255, 255, 255);
+            font-family: Open Sans;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0;
+            text-align: left;
+          }
+
+          .achievements {
+            width: 88%;
+            margin-top: 31px;
+
+            .df1 {
+              display: block;
+
+              .item1 {
+                display: flex;
+                align-items: center;
+
+                button {
+                  width: 55px;
+                  height: 55px;
+                  background: white;
+                  border: 0;
+                  border-radius: 50px;
+
+                  img {
+                    width: 41px;
+                    height: 41px;
+                  }
+                }
+
+                p {
+                  width: 100px;
+                  color: rgb(255, 255, 255);
+                  font-family: sans-serif;
+                  font-size: 20px;
+                  font-weight: 400;
+                  line-height: 24px;
+                  text-align: left;
+                  margin-left: 24px;
+                }
+
+
+              }
+
+              .item2 {
+                align-items: center;
+                margin-top: 15px;
+                display: flex;
+
+                button {
+                  width: 55px;
+                  height: 55px;
+                  background: white;
+                  border: 0;
+                  border-radius: 50px;
+
+                  img {
+                    border: 0;
+                    width: 41px;
+                    height: 41px;
+                  }
+                }
+
+                p {
+                  color: rgb(255, 255, 255);
+                  font-family: sans-serif;
+                  font-size: 20px;
+                  font-weight: 400;
+                  line-height: 24px;
+                  text-align: left;
+                  margin-left: 24px;
+                }
+
+
+              }
+            }
+
+            .df2 {
+              margin-top: 15px;
+
+              .item1 {
+                display: flex;
+                align-items: center;
+
+                button {
+                  width: 55px;
+                  height: 55px;
+                  background: white;
+                  border: 0;
+                  border-radius: 50px;
+
+                  img {
+                    width: 41px;
+                    height: 41px;
+                  }
+                }
+
+                p {
+                  width: 100px;
+                  color: rgb(255, 255, 255);
+                  font-family: sans-serif;
+                  font-size: 20px;
+                  font-weight: 400;
+                  line-height: 24px;
+                  text-align: left;
+                  margin-left: 24px;
+                }
+
+
+              }
+
+              .item2 {
+                margin-top: 15px;
+                display: flex;
+                align-items: center;
+
+                button {
+                  width: 55px;
+                  height: 55px;
+                  background: white;
+                  border: 0;
+                  border-radius: 50px;
+
+                  img {
+                    width: 41px;
+                    height: 41px;
+                    margin-bottom: 15px;
+                  }
+                }
+
+                p {
+                  color: rgb(255, 255, 255);
+                  font-family: sans-serif;
+                  font-size: 20px;
+                  font-weight: 400;
+                  line-height: 24px;
+                  text-align: left;
+                  margin-left: 24px;
+                }
+              }
+            }
+          }
+        }
+
+
+      }
+
+      .image-container {
+        width: 100%; /* Ширина контейнера занимает 100% от родителя */
+        height: 700px;; /* Фиксированная высота контейнера */
+        overflow: hidden; /* Обрезает изображение, которое выходит за границы контейнера */
+
+        img {
+          width: 929px; /* Ширина изображения автоматически рассчитывается для сохранения пропорций */
+          height: 100%; /* Высота изображения занимает 100% высоты родительского контейнера */
+          display: block; /* Убирает лишние пробелы вокруг изображения */
+          object-fit: cover; /* Масштабирование изображения для заполнения контейнера без искажений */
+        }
+      }
+    }
+
+    .centere {
+      display: flex;
+      justify-content: center;
+
+      .relationship {
+
+        gap: 1%;
+        width: 100%;
+        display: block;
+        justify-content: center;
+        max-width: 990px;
+
+
+        .relation_left {
+          width: 99%;
+          margin-top: 95px;
+          margin-left: 1%;
+
+          .center {
+            justify-content: center;
+            display: flex;
+
+            button {
+              box-sizing: border-box;
+              border: 1px solid rgb(199, 220, 251);
+              border-radius: 800px;
+
+              color: rgb(141, 142, 146);
+              font-family: Open Sans;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 24px;
+              letter-spacing: 0;
+              text-align: center;
+              width: 129px;
+              height: 34px;
+              background: transparent;
+            }
+          }
+
+          h2 {
+            color: rgb(27, 44, 81);
+            font-family: sans-serif;
+            font-size: 7vw;
+            font-weight: 400;
+            line-height: 48px;
+            letter-spacing: 0;
+            text-align: left;
+            margin-top: 30px;
+          }
+        }
+
+        h3 {
+          display: none;
+        }
+
+        .center {
+          justify-content: center;
+          display: flex;
+
+          .rel1 {
+            gap: 10%;
+            margin-top: 73px;
+            width: 95%;
+            height: 152px;
+            border-radius: 8px;
+            background: rgb(239, 245, 255);
+            display: flex;
+            align-items: center;
+
+
+            button {
+              border-radius: 50%;
+              width: 55px;
+              height: 55px;
+              background: white;
+              border: 0;
+              margin-left: 100%;
+
+              img {
+                width: 17px;
+                height: 17px;
+              }
+            }
+
+            .item1 {
+              margin-left: 11%;
+              width: 50%;
+
+
+              p {
+                color: rgb(141, 142, 146);
+                font-family: Open Sans;
+                font-size: 3vw;
+                font-weight: 400;
+                text-align: left;
+              }
+
+              h2 {
+                color: rgb(27, 44, 81);
+                font-family: sans-serif;
+                font-size: 3.5vw;
+                font-weight: 400;
+                text-align: left;
+                margin-top: 0;
+              }
+            }
+          }
+        }
+
+        .center {
+          justify-content: center;
+          display: flex;
+
+          .rel2 {
+            gap: 10%;
+            margin-top: 23px;
+            width: 95%;
+            height: 152px;
+            border-radius: 8px;
+            background: rgb(239, 245, 255);
+            display: flex;
+            align-items: center;
+
+
+            button {
+              border-radius: 50%;
+              width: 55px;
+              height: 55px;
+              background: white;
+              border: 0;
+              margin-left: 100%;
+
+              img {
+                width: 17px;
+                height: 17px;
+              }
+            }
+
+            .item1 {
+              margin-left: 11%;
+              width: 50%;
+
+
+              p {
+                width: 101%;
+                color: rgb(141, 142, 146);
+                font-family: Open Sans;
+                font-size: 3vw;
+                font-weight: 400;
+                text-align: left;
+              }
+
+              h2 {
+                color: rgb(27, 44, 81);
+                font-family: sans-serif;
+                font-size: 3.5vw;
+                font-weight: 400;
+                text-align: left;
+                margin-top: 0;
+              }
+            }
+          }
+        }
+
+
+        .relation_right {
+          margin-right: 1%;
+          margin-top: 95px;
+          width: 100%;
+          border-radius: 8px;
+          background: rgb(239, 245, 255);
+          height: 473px;
+
+          .center {
+            display: flex;
+            justify-content: center;
+
+            h2 {
+              font-family: sans-serif;
+              font-size: 8vw;
+              font-weight: 400;
+              line-height: 48px;
+              letter-spacing: 0;
+              text-align: left;
+              margin-top: 51px;
+              color: rgb(248, 204, 11);
+            }
+
+            h3 {
+              margin-top: 20px;
+              color: rgb(141, 142, 146);
+              display: block;
+              font-family: Open Sans;
+              font-size: 3.6vw;
+              font-weight: 400;
+              line-height: 24px;
+              text-align: center;
+              width: 87%;
+            }
+          }
+
+          .df {
+
+            display: flex;
+            justify-content: center;
+            gap: 1%;
+            margin-top: 47px;
+
+            .input {
+              margin-left: 7%;
+              width: 50%;
+              height: 55px;
+              box-sizing: border-box;
+              border: 1.6px solid rgb(238, 238, 238);
+              border-radius: 12px;
+              text-align: left;
+              padding: 12px 43px;
+              color: black;
+              font-family: sans-serif;
+              font-size: 16px;
+            }
+
+            .container {
+              width: 60%;
+
+              .iti--allow-dropdown {
+                width: 100%;
+
+                .input2 {
+                  width: 85%;
+                  height: 55px;
+                  box-sizing: border-box;
+                  border: 1.6px solid rgb(238, 238, 238);
+                  border-radius: 12px;
+                  text-align: left;
+                  padding: 12px 43px;
+                  color: black;
+                  font-family: sans-serif;
+                  font-size: 16px;
+                }
+              }
+
+              .input::placeholder {
+                color: rgba(51, 51, 51, 0.4);
+                font-family: sans-serif;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 16px;
+                text-align: left;
+              }
+            }
+          }
+
+          .center {
+            display: flex;
+            justify-content: center;
+
+            button {
+              margin-top: 15px;
+              width: 87%;
+              box-sizing: border-box;
+              border: 1px solid rgb(248, 204, 11);
+              border-radius: 8px;
+
+              background: rgb(248, 204, 11);
+              height: 58px;
+
+              color: rgb(255, 255, 255);
+              font-family: Open Sans;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 24px;
+              text-align: center;
+            }
+          }
+
+        }
+      }
+
+
+    }
+
+  }
+
+  footer {
+    width: 100%;
+    background: rgb(196, 160, 7);
+
+    .df1 {
+      display: flex;
+      gap: 10%;
+      padding-top: 96px;
+      margin-left: 10%;
+
+      .item1 {
+        width: 50%;
+
+        .zag {
+          color: rgb(239, 245, 255);
+          font-family: sans-serif;
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 24px;
+          letter-spacing: 0;
+          text-align: left;
+          margin-bottom: 24px;
+        }
+
+        .df {
+          display: flex;
+          margin-top: 8px;
+
+          .one {
+            margin-left: 5px;
+          }
+
+          svg {
+            width: 21px;
+            height: 21px;
+          }
+
+
+          p {
+            color: rgb(239, 245, 255);
+            font-family: Open Sans;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0;
+            text-align: left;
+            gap: 16px;
+            margin-left: 10px;
+          }
+        }
+
+        .dff {
+          margin-top: 23px;
+          display: flex;
+          gap: 5px;
+
+          .lg {
+            box-sizing: border-box;
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 50px;
+            background: transparent;
+            width: 35px;
+            height: 35px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+
+          }
+
+        }
+      }
+
+      .item2 {
+        width: 30%;
+
+        h2 {
+          color: rgb(239, 245, 255);
+          font-family: sans-serif;
+          font-size: 19px;
+          font-weight: 600;
+          line-height: 24px;
+          letter-spacing: 0;
+          text-align: left;
+          margin-bottom: 25px;
+        }
+
+        .df {
+          display: flex;
+          gap: 7px;
+          margin-top: 7px;
+
+          p {
+            color: rgb(255, 255, 255);
+            font-family: Open Sans;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 22.5px;
+            letter-spacing: 0;
+            text-align: left;
+            text-transform: capitalize;
+            margin-top: -5px;
+          }
+        }
+      }
+
+      .item3 {
+        display: none;
+      }
+
+    }
+
+    .center {
+      display: flex;
+      justify-content: center;
+
+      hr {
+        width: 72.5%;
+        height: 1px;
+        background: white;
+        border: 0;
+        margin-top: 80px;
+      }
+    }
+
+    .df2 {
+      gap: 10%;
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 10px;
+
+      p {
+        font-size: 3vw;
+        color: rgb(0, 0, 0);
+        font-family: Open Sans;
+        font-weight: 400;
+        line-height: 22.5px;
+        letter-spacing: 0;
+        text-align: left;
+
+        span {
+          color: white;
+        }
+
+        .name {
+          color: white;
+        }
+      }
+
+      .design {
+      }
+    }
+  }
+
+}
+
+@media screen and (min-width: 642px) and (max-width: 995px) {
+
+
+  header {
+    background: rgb(248, 204, 11);
+
+
+    nav {
+      opacity: 90%;
+      width: 100%;
+      height: 108px;
+      background: rgb(248, 204, 11);
+      display: flex;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+
+      img {
+        width: 144px;
+        height: 53px;
+        margin-left: 49px;
+      }
+
+      p {
+        margin-right: 51px;
+        color: rgb(12, 30, 52);
+        font-family: sans-serif;
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 33px;
+        letter-spacing: 0;
+        text-align: left;
+      }
+    }
+
+    .image-container {
+      width: 100%; /* Ширина контейнера занимает 100% от родителя */
+      height: 250px; /* Фиксированная высота контейнера */
+      overflow: hidden; /* Обрезает изображение, которое выходит за границы контейнера */
+
+      img {
+        width: 100%; /* Ширина изображения автоматически рассчитывается для сохранения пропорций */
+        height: 100%; /* Высота изображения занимает 100% высоты родительского контейнера */
+        display: block; /* Убирает лишние пробелы вокруг изображения */
+        object-fit: cover; /* Масштабирование изображения для заполнения контейнера без искажений */
+      }
+    }
+
+    h1 {
+      width: 90%;
+      margin-left: 48px;
+      margin-top: 48px;
+      color: rgb(255, 255, 255);
+      font-family: sans-serif;
+      font-size: 56px;
+      font-weight: 600;
+      line-height: 67.2px;
+      letter-spacing: 0;
+      text-align: left;
+    }
+
+    .header_components {
+      display: flex;
+
+      .hr {
+        margin-left: 3%;
+        display: flex;
+        margin-top: 50px;
+
+        hr {
+          /* Rectangle */
+          width: 1px;
+          height: 90.39px;
+          border: 0;
+          background: rgb(239, 245, 255);
+        }
+
+        .hr2 {
+          /* Rectangle */
+          width: 1px;
+          height: 66.39px;
+          border: 0;
+          background: rgb(239, 245, 255);
+        }
+
+        .solve {
+          width: 183px;
+          margin-left: 14%;
+
+          h2 {
+            color: rgb(255, 255, 255);
+            font-family: sans-serif;
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 38.4px;
+            letter-spacing: 0;
+            text-align: left;
+          }
+
+          h3 {
+            width: 85%;
+            color: rgb(239, 245, 255);
+            font-family: sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0;
+            text-align: left;
+            margin-top: 5px;
+          }
+
+          button {
+            width: 171px;
+            height: 57px;
+            margin-top: 16px;
+            margin-left: -25px;
+            box-sizing: border-box;
+            border: 1px solid rgb(252, 255, 101);
+            border-radius: 800px;
+            background: rgb(255, 255, 255);
+            color: rgb(206, 210, 0);
+            font-family: Open Sans;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 22.5px;
+            letter-spacing: 0;
+            text-align: center;
+            margin-bottom: 90px;
+
+          }
+        }
+      }
+    }
+
+  }
+
+  section {
+    width: 100%;
+
+    .nas {
+
+      .df_elements {
+        display: block;
+
+        .img1 {
+          border-radius: 23px;
+          width: 47%;
+          height: 35%;
+          margin-left: 8%;
+          z-index: 1;
+          margin-top: 152px;
+        }
+
+        .img2 {
+          border: 15px solid white;
+          border-radius: 23px;
+          width: 46%;
+          height: 0%;
+          margin-left: 45%;
+          margin-top: -230px;
+        }
+
+        .section__items {
+          margin-left: 10%;
+          margin-top: 20px;
+
+          .about {
+            box-sizing: border-box;
+            border: 1px solid rgb(248, 204, 11);
+            border-radius: 800px;
+            width: 92px;
+            height: 34px;
+            background: transparent;
+            color: rgb(248, 204, 11);
+            font-family: sans-serif;
+            font-size: 2vw;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: center;
+          }
+
+          h2 {
+            margin-top: 2%;
+            color: rgb(248, 204, 11);
+            font-family: sans-serif;
+            font-size: 5vw;
+            line-height: 123%;
+            letter-spacing: 0;
+            text-align: left;
+            width: 76%;
+          }
+
+          h3 {
+            margin-top: 2%;
+            color: rgb(141, 142, 146);
+            font-family: Open Sans;
+            font-size: 2.2vw;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0;
+            text-align: left;
+            width: 77%;
+          }
+
+          .items {
+            margin-top: 23px;
+
+            .item {
+              gap: 15px;
+              margin-top: 2%;
+              display: flex;
+              color: rgb(141, 142, 146);
+              font-family: Open Sans;
+              font-size: 16px;
+              text-align: left;
+
+              p {
+                font-size: 2vw;
+                margin-top: -4px;
+              }
+            }
+
+            button {
+              font-size: 2vw;
+              box-sizing: border-box;
+              border: 1px solid rgb(248, 204, 11);
+              border-radius: 800px;
+
+              background: rgb(248, 204, 11);
+              width: 28%;
+              height: 58px;
+              margin-top: 4%;
+              color: rgb(255, 255, 255);
+              font-family: Open Sans;
+              font-weight: 600;
+              line-height: 24px;
+              letter-spacing: 0;
+              text-align: center;
+            }
+
+
+          }
+        }
+      }
+
+    }
+
+    .uslugi {
+      width: 100%;
+      margin-top: 96px;
+
+      .centerr {
+        justify-content: center;
+        display: flex;
+
+        button {
+          box-sizing: border-box;
+          border: 1px solid rgb(248, 204, 11);
+          border-radius: 800px;
+          width: 101px;
+          height: 34px;
+          background: transparent;
+
+          color: rgb(248, 204, 11);
+          font-family: Open Sans;
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: 0;
+          text-align: center;
+        }
+
+        .h2 {
+          margin-top: 15px;
+          color: rgb(248, 204, 11);
+          font-family: sans-serif;
+          font-size: 40px;
+          font-weight: 600;
+          line-height: 48px;
+          letter-spacing: 0;
+          text-align: center;
+        }
+      }
+
+      .center {
+        justify-content: center;
+
+        .df {
+          margin-top: 50px;
+          justify-content: center;
+          align-items: center;
+          display: block;
+          gap: 3%;
+
+          .center {
+            display: flex;
+            justify-content: center;
+
+            .card {
+              margin-top: 15px;
+              width: 93%;
+              height: 460px;
+              border-radius: 8px;
+              background: rgb(239, 245, 255);
+
+              .button {
+                width: 108px;
+                height: 108px;
+                background: white;
+                margin-top: 58px;
+                margin-left: 48px;
+                border: 0;
+                border-radius: 50%;
+
+                .ava {
+                  width: 50px;
+                  height: 50px;
+                }
+              }
+
+              h2 {
+                width: 80%;
+                margin-top: 14px;
+                margin-left: 48px;
+                color: rgb(248, 204, 11);
+                font-family: sans-serif;
+                font-size: 34px;
+                font-weight: 400;
+                line-height: 28.8px;
+                letter-spacing: 0;
+                text-align: left;
+              }
+
+              h3 {
+                width: 80%;
+                margin-left: 48px;
+                margin-top: 17px;
+                color: rgb(141, 142, 146);
+                font-family: Open Sans;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: 0;
+                text-align: left;
+              }
+
+              button {
+                margin-left: 48px;
+                margin-top: 35px;
+                width: 40px;
+                height: 40px;
+                border-radius: 50px;
+                border: 0;
+
+                img {
+                  width: 23px;
+                  height: 23px;
+                }
+              }
+            }
+          }
+        }
+
+        .card4 {
+          margin-top: 15px;
+          width: 93%;
+          height: 460px;
+          border-radius: 8px;
+          background: rgb(239, 245, 255);
+
+          .button {
+            width: 108px;
+            height: 108px;
+            background: white;
+            margin-top: 58px;
+            margin-left: 48px;
+            border: 0;
+            border-radius: 50%;
+
+            .ava {
+              width: 50px;
+              height: 50px;
+            }
+          }
+
+          h2 {
+            width: 80%;
+            margin-top: 14px;
+            margin-left: 48px;
+            color: rgb(248, 204, 11);
+            font-family: sans-serif;
+            font-size: 34px;
+            font-weight: 400;
+            line-height: 28.8px;
+            letter-spacing: 0;
+            text-align: left;
+          }
+
+          h3 {
+            width: 80%;
+            margin-left: 48px;
+            margin-top: 17px;
+            color: rgb(141, 142, 146);
+            font-family: Open Sans;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0;
+            text-align: left;
+          }
+
+          button {
+            margin-left: 48px;
+            margin-top: 35px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50px;
+            border: 0;
+
+            img {
+              width: 23px;
+              height: 23px;
+            }
+          }
+        }
+
+        .button {
+          width: 65px;
+          height: 65px;
+          background: white;
+          margin-top: 10px;
+          margin-left: 48px;
+          border: 0;
+          border-radius: 50px;
+
+          .ava {
+            width: 40px;
+            height: 40px;
+          }
+        }
+
+        h2 {
+          margin-top: 14px;
+          margin-left: 48px;
+          color: rgb(248, 204, 11);
+          font-family: sans-serif;
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 28.8px;
+          letter-spacing: 0;
+          text-align: left;
+        }
+
+        h3 {
+          margin-left: 48px;
+          margin-top: 17px;
+          color: rgb(141, 142, 146);
+          font-family: Open Sans;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: 0;
+          text-align: left;
+          width: 80%;
+        }
+
+        button {
+          margin-left: 48px;
+          margin-top: 35px;
+          width: 40px;
+          height: 40px;
+          border-radius: 50px;
+          border: 0;
+
+          img {
+            width: 17px;
+            height: 17px;
+          }
+        }
+      }
+
+      .cen {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+  }
+
+  .why {
+    margin-top: 95px;
+    width: 100%;
+    display: flex;
+
+    .left {
+      background: rgb(248, 204, 11);
+
+      .why_item {
+        margin-left: 10%;
+        margin-top: 95px;
+        width: 104%;
+
+
+        .but {
+          width: 217px;
+          height: 34px;
+          box-sizing: border-box;
+          border: 2px solid white;
+          border-radius: 800px;
+          background: transparent;
+
+          color: rgb(239, 245, 255);
+          font-family: Open Sans;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: 0;
+          text-align: center;
+        }
+
+        h2 {
+          width: 88%;
+          color: rgb(255, 255, 255);
+          font-family: sans-serif;
+          font-size: 40px;
+          font-weight: 700;
+          line-height: 48px;
+          letter-spacing: 0;
+          text-align: left;
+          margin-top: 16px;
+        }
+
+        h3 {
+          width: 84%;
+          color: rgb(255, 255, 255);
+          font-family: Open Sans;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: 0;
+          text-align: left;
+        }
+
+        .achievements {
+          width: 88%;
+          margin-top: 31px;
+
+          .df1 {
+            display: flex;
+
+            .item1 {
+              display: flex;
+
+              button {
+                width: 55px;
+                height: 55px;
+                background: white;
+                border: 0;
+                border-radius: 50px;
+
+                img {
+                  width: 41px;
+                  height: 41px;
+                }
+              }
+
+              p {
+                width: 100px;
+                color: rgb(255, 255, 255);
+                font-family: sans-serif;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 24px;
+                text-align: left;
+                margin-top: 15px;
+                margin-left: 24px;
+              }
+
+
+            }
+
+            .item2 {
+              margin-left: 39px;
+              display: flex;
+
+              button {
+                width: 55px;
+                height: 55px;
+                background: white;
+                border: 0;
+                border-radius: 50px;
+
+                img {
+                  width: 41px;
+                  height: 41px;
+                }
+              }
+
+              p {
+                color: rgb(255, 255, 255);
+                font-family: sans-serif;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 24px;
+                text-align: left;
+                margin-top: 15px;
+                margin-left: 24px;
+              }
+
+
+            }
+          }
+
+          .df2 {
+            margin-top: 24px;
+            display: flex;
+
+            .item1 {
+              display: flex;
+
+              button {
+                width: 55px;
+                height: 55px;
+                background: white;
+                border: 0;
+                border-radius: 50px;
+
+                img {
+                  width: 41px;
+                  height: 41px;
+                }
+              }
+
+              p {
+                width: 100px;
+                color: rgb(255, 255, 255);
+                font-family: sans-serif;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 24px;
+                text-align: left;
+                margin-top: 15px;
+                margin-left: 24px;
+              }
+
+
+            }
+
+            .item2 {
+              display: flex;
+              margin-left: 39px;
+
+              button {
+                width: 55px;
+                height: 55px;
+                background: white;
+                border: 0;
+                border-radius: 50px;
+
+                img {
+                  width: 41px;
+                  height: 41px;
+                }
+              }
+
+              p {
+                color: rgb(255, 255, 255);
+                font-family: sans-serif;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 24px;
+                text-align: left;
+                margin-top: 15px;
+                margin-left: 24px;
+              }
+
+
+            }
+          }
+        }
+      }
+
+
+    }
+
+    .image-container {
+      width: 100%; /* Ширина контейнера занимает 100% от родителя */
+      height: 600px; /* Фиксированная высота контейнера */
+      overflow: hidden; /* Обрезает изображение, которое выходит за границы контейнера */
+
+      img {
+        width: 929px; /* Ширина изображения автоматически рассчитывается для сохранения пропорций */
+        height: 100%; /* Высота изображения занимает 100% высоты родительского контейнера */
+        display: block; /* Убирает лишние пробелы вокруг изображения */
+        object-fit: cover; /* Масштабирование изображения для заполнения контейнера без искажений */
+      }
+    }
+  }
+
+  .centere {
+    display: flex;
+    justify-content: center;
+
+    .relationship {
+
+      gap: 1%;
+      width: 100%;
+      display: block;
+      justify-content: center;
+      max-width: 990px;
+
+
+      .relation_left {
+        width: 99%;
+        margin-top: 95px;
+        margin-left: 1%;
+
+        button {
+          box-sizing: border-box;
+          border: 1px solid rgb(199, 220, 251);
+          border-radius: 800px;
+
+          color: rgb(141, 142, 146);
+          font-family: Open Sans;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: 0;
+          text-align: center;
+          width: 129px;
+          height: 34px;
+          background: transparent;
+        }
+      }
+
+      h2 {
+        color: rgb(27, 44, 81);
+        font-family: sans-serif;
+        font-size: 7vw;
+        font-weight: 400;
+        line-height: 48px;
+        letter-spacing: 0;
+        text-align: left;
+        margin-top: 30px;
+      }
+
+      h3 {
+        display: none;
+      }
+
+      .rel1 {
+        margin-top: 73px;
+        width: 100%;
+        height: 152px;
+        border-radius: 8px;
+        background: rgb(239, 245, 255);
+        display: flex;
+        align-items: center;
+
+
+        button {
+          width: 55px;
+          height: 55px;
+          background: white;
+          border: 0;
+          margin-left: 100%;
+
+          img {
+            width: 17px;
+            height: 17px;
+          }
+        }
+
+        .item1 {
+          margin-left: 11%;
+          width: 50%;
+
+
+          p {
+            color: rgb(141, 142, 146);
+            font-family: Open Sans;
+            font-size: 2vw;
+            font-weight: 400;
+            text-align: left;
+          }
+
+          h2 {
+            color: rgb(27, 44, 81);
+            font-family: sans-serif;
+            font-size: 2.5vw;
+            font-weight: 400;
+            text-align: left;
+            margin-top: 0;
+          }
+        }
+      }
+
+      .rel2 {
+        align-items: center;
+        margin-top: 23px;
+        width: 100%;
+        height: 152px;
+        border-radius: 8px;
+        background: rgb(239, 245, 255);
+        display: flex;
+
+        .a2 {
+
+          button {
+            width: 55px;
+            height: 55px;
+            background: white;
+            border: 0;
+            margin-left: 100%;
+
+            img {
+              width: 17px;
+              height: 17px;
+            }
+          }
+        }
+
+        .item1 {
+          margin-left: 11%;
+
+          p {
+            font-size: 2vw;
+            width: 100%;
+            color: rgb(141, 142, 146);
+            font-family: Open Sans;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: left;
+          }
+
+          h2 {
+            font-size: 2.5vw;
+            color: rgb(27, 44, 81);
+            font-family: sans-serif;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: left;
+            margin-top: 8px;
+          }
+        }
+      }
+
+      .relation_right {
+        margin-right: 1%;
+        margin-top: 95px;
+        width: 100%;
+        height: 546px;
+        border-radius: 8px;
+        background: rgb(239, 245, 255);
+
+        .center {
+          display: flex;
+          justify-content: center;
+
+          h2 {
+            margin-top: 51px;
+            color: rgb(248, 204, 11);
+          }
+
+          h3 {
+            margin-top: 50px;
+            color: rgb(141, 142, 146);
+            display: block;
+            font-family: Open Sans;
+            font-size: 1.6vw;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: center;
+            width: 87%;
+          }
+        }
+
+        .df {
+
+          display: flex;
+          justify-content: center;
+          gap: 1%;
+          margin-top: 100px;
+
+          .input {
+            margin-left: 7%;
+            width: 50%;
+            height: 55px;
+            box-sizing: border-box;
+            border: 1.6px solid rgb(238, 238, 238);
+            border-radius: 12px;
+            text-align: left;
+            padding: 12px 43px;
+            color: black;
+            font-family: sans-serif;
+            font-size: 16px;
+          }
+
+          .container {
+            width: 60%;
+
+            .iti--allow-dropdown {
+              width: 100%;
+
+              .input2 {
+                width: 85%;
+                height: 55px;
+                box-sizing: border-box;
+                border: 1.6px solid rgb(238, 238, 238);
+                border-radius: 12px;
+                text-align: left;
+                padding: 12px 43px;
+                color: black;
+                font-family: sans-serif;
+                font-size: 16px;
+              }
+            }
+
+            .input::placeholder {
+              color: rgba(51, 51, 51, 0.4);
+              font-family: sans-serif;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 16px;
+              text-align: left;
+            }
+          }
+        }
+
+        .center {
+          display: flex;
+          justify-content: center;
+
+          button {
+            margin-top: 50px;
+            width: 87%;
+            box-sizing: border-box;
+            border: 1px solid rgb(248, 204, 11);
+            border-radius: 8px;
+
+            background: rgb(248, 204, 11);
+            height: 58px;
+
+            color: rgb(255, 255, 255);
+            font-family: Open Sans;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: center;
+          }
+        }
+
+      }
+    }
+
+
+  }
+
+  footer {
+    margin-top: 100px;
+    width: 100%;
+    background: rgb(196, 160, 7);
+
+    .df1 {
+      display: flex;
+      gap: 10%;
+      padding-top: 96px;
+      margin-left: 10%;
+
+      .item1 {
+        width: 33%;
+
+        h2 {
+          color: rgb(239, 245, 255);
+          font-family: sans-serif;
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 24px;
+          letter-spacing: 0;
+          text-align: left;
+          margin-bottom: 24px;
+        }
+
+        .df {
+          display: flex;
+          margin-top: 8px;
+
+          .one {
+            margin-left: 5px;
+          }
+
+          svg {
+            width: 21px;
+            height: 21px;
+          }
+
+
+          p {
+            color: rgb(239, 245, 255);
+            font-family: Open Sans;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0;
+            text-align: left;
+            gap: 16px;
+            margin-left: 10px;
+          }
+        }
+
+        .dff {
+          margin-top: 23px;
+          display: flex;
+          gap: 5px;
+
+          .lg {
+            box-sizing: border-box;
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 50px;
+            background: transparent;
+            width: 35px;
+            height: 35px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+
+          }
+
+        }
+      }
+
+      .item2 {
+        width: 30%;
+
+        h2 {
+          color: rgb(239, 245, 255);
+          font-family: sans-serif;
+          font-size: 19px;
+          font-weight: 600;
+          line-height: 24px;
+          letter-spacing: 0;
+          text-align: left;
+          margin-bottom: 25px;
+        }
+
+        .df {
+          display: flex;
+          gap: 7px;
+          margin-top: 7px;
+
+          p {
+            color: rgb(255, 255, 255);
+            font-family: Open Sans;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 22.5px;
+            letter-spacing: 0;
+            text-align: left;
+            text-transform: capitalize;
+            margin-top: -5px;
+          }
+        }
+      }
+
+      .item3 {
+        width: 50%;
+
+        h2 {
+          color: rgb(239, 245, 255);
+          font-family: sans-serif;
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 24px;
+          letter-spacing: 0;
+          text-align: left;
+        }
+
+        h3 {
+          margin-top: 25px;
+          color: rgb(239, 245, 255);
+          font-family: sans-serif;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: 0;
+          text-align: left;
+          width: 235px;
+        }
+      }
+
+    }
+
+    .center {
+      display: flex;
+      justify-content: center;
+
+      hr {
+        width: 72.5%;
+        height: 1px;
+        background: white;
+        border: 0;
+        margin-top: 80px;
+      }
+    }
+
+    .df2 {
+      gap: 10%;
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 10px;
+
+      p {
+        color: rgb(0, 0, 0);
+        font-family: Open Sans;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22.5px;
+        letter-spacing: 0;
+        text-align: left;
+
+        span {
+          color: white;
+        }
+
+        .name {
+          color: white;
+        }
+      }
+
+      .design {
+      }
+    }
+  }
+
+}
+
+@media screen and (min-width: 996px) and (max-width: 1270px) {
+
+  header {
+    background: rgb(248, 204, 11);
+
+
+    nav {
+      opacity: 90%;
+      width: 100%;
+      height: 108px;
+      background: rgb(248, 204, 11);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+
+      img {
+        width: 144px;
+        height: 53px;
+        margin-left: 49px;
+      }
+
+      p {
+        margin-right: 51px;
+        color: rgb(12, 30, 52);
+        font-family: sans-serif;
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 33px;
+        letter-spacing: 0;
+        text-align: left;
+      }
+    }
+
+    .image-container {
+      width: 100%; /* Ширина контейнера занимает 100% от родителя */
+      height: 250px; /* Фиксированная высота контейнера */
+      overflow: hidden; /* Обрезает изображение, которое выходит за границы контейнера */
+
+      img {
+        width: 100%; /* Ширина изображения автоматически рассчитывается для сохранения пропорций */
+        height: 100%; /* Высота изображения занимает 100% высоты родительского контейнера */
+        display: block; /* Убирает лишние пробелы вокруг изображения */
+        object-fit: cover; /* Масштабирование изображения для заполнения контейнера без искажений */
+      }
+    }
+
+    h1 {
+      width: 90%;
+      margin-left: 48px;
+      margin-top: 48px;
+      color: rgb(255, 255, 255);
+      font-family: sans-serif;
+      font-size: 56px;
+      font-weight: 600;
+      line-height: 67.2px;
+      letter-spacing: 0;
+      text-align: left;
+    }
+
+    .header_components {
+      display: flex;
+
+      .hr {
+        margin-left: 3%;
+        display: flex;
+        margin-top: 50px;
+
+        hr {
+          /* Rectangle */
+          width: 1px;
+          height: 90.39px;
+          border: 0;
+          background: rgb(239, 245, 255);
+        }
+
+        .hr2 {
+          /* Rectangle */
+          width: 1px;
+          height: 66.39px;
+          border: 0;
+          background: rgb(239, 245, 255);
+        }
+
+        .solve {
+          width: 183px;
+          margin-left: 14%;
+
+          h2 {
+            color: rgb(255, 255, 255);
+            font-family: sans-serif;
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 38.4px;
+            letter-spacing: 0;
+            text-align: left;
+          }
+
+          h3 {
+            width: 85%;
+            color: rgb(239, 245, 255);
+            font-family: sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0;
+            text-align: left;
+            margin-top: 5px;
+          }
+
+          button {
+            width: 171px;
+            height: 57px;
+            margin-top: 16px;
+            margin-left: -25px;
+            box-sizing: border-box;
+            border: 1px solid rgb(252, 255, 101);
+            border-radius: 800px;
+            background: rgb(255, 255, 255);
+            color: rgb(206, 210, 0);
+            font-family: Open Sans;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 22.5px;
+            letter-spacing: 0;
+            text-align: center;
+            margin-bottom: 90px;
+
+          }
+        }
+      }
+    }
+
+  }
+
+  section {
+    width: 100%;
+
+    .nas {
+
+      .df_elements {
+        display: flex;
+
+        .img1 {
+          box-sizing: border-box;
+          border-radius: 23px;
+          width: 28%;
+          height: 100%;
+          margin-top: 254px;
+          margin-left: 7%;
+          z-index: 1;
+        }
+
+        .img2 {
+          width: 32%;
+          height: 100%;
+          margin-left: -121px;
+          margin-top: 101px;
+        }
+
+        .section__items {
+          margin-top: 96px;
+          margin-left: 40px;
+
+          .about {
+            box-sizing: border-box;
+            border: 1px solid rgb(248, 204, 11);
+            border-radius: 800px;
+            width: 92px;
+            height: 34px;
+            background: transparent;
+            color: rgb(248, 204, 11);
+            font-family: sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: center;
+          }
+
+          h2 {
+            margin-top: 2%;
+            color: rgb(248, 204, 11);
+            font-family: sans-serif;
+            font-size: 2vw;
+            line-height: 123%;
+            letter-spacing: 0;
+            text-align: left;
+            width: 59%;
+          }
+
+          h3 {
+            margin-top: 2%;
+            color: rgb(141, 142, 146);
+            font-family: Open Sans;
+            font-size: 1vw;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0;
+            text-align: left;
+            width: 77%;
+          }
+
+          .items {
+            margin-top: 23px;
+
+            .item {
+              gap: 15px;
+              margin-top: 2%;
+              display: flex;
+              color: rgb(141, 142, 146);
+              font-family: Open Sans;
+              font-size: 16px;
+              text-align: left;
+
+              p {
+                font-size: 0.8vw;
+                margin-top: -2px;
+              }
+            }
+
+            button {
+              font-size: 1vw;
+              box-sizing: border-box;
+              border: 1px solid rgb(248, 204, 11);
+              border-radius: 800px;
+
+              background: rgb(248, 204, 11);
+              width: 28%;
+              height: 58px;
+              margin-top: 4%;
+              color: rgb(255, 255, 255);
+              font-family: Open Sans;
+              font-weight: 600;
+              line-height: 24px;
+              letter-spacing: 0;
+              text-align: center;
+            }
+
+
+          }
+        }
+      }
+
+    }
+
+    .uslugi {
+      width: 100%;
+      margin-top: 96px;
+
+      .centerr {
+        justify-content: center;
+        display: flex;
+
+        button {
+          box-sizing: border-box;
+          border: 1px solid rgb(248, 204, 11);
+          border-radius: 800px;
+          width: 101px;
+          height: 34px;
+          background: transparent;
+
+          color: rgb(248, 204, 11);
+          font-family: Open Sans;
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: 0;
+          text-align: center;
+        }
+
+        .h2 {
+          margin-top: 15px;
+          color: rgb(248, 204, 11);
+          font-family: sans-serif;
+          font-size: 40px;
+          font-weight: 600;
+          line-height: 48px;
+          letter-spacing: 0;
+          text-align: center;
+        }
+      }
+
+      .center {
+        justify-content: center;
+
+        .df {
+          margin-top: 50px;
+          justify-content: center;
+          align-items: center;
+          display: flex;
+          gap: 3%;
+
+          .card {
+            width: 313px;
+            height: 560px;
+            border-radius: 8px;
+            background: rgb(239, 245, 255);
+
+            .button {
+              width: 65px;
+              height: 65px;
+              background: white;
+              margin-top: 58px;
+              margin-left: 48px;
+              border: 0;
+              border-radius: 50px;
+
+              .ava {
+                width: 40px;
+                height: 40px;
+              }
+            }
+
+            h2 {
+              width: 80%;
+              margin-top: 14px;
+              margin-left: 48px;
+              color: rgb(248, 204, 11);
+              font-family: sans-serif;
+              font-size: 24px;
+              font-weight: 400;
+              line-height: 28.8px;
+              letter-spacing: 0;
+              text-align: left;
+            }
+
+            h3 {
+              width: 80%;
+              margin-left: 48px;
+              margin-top: 17px;
+              color: rgb(141, 142, 146);
+              font-family: Open Sans;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 24px;
+              letter-spacing: 0;
+              text-align: left;
+            }
+
+            button {
+              margin-left: 48px;
+              margin-top: 35px;
+              width: 40px;
+              height: 40px;
+              border-radius: 50px;
+              border: 0;
+
+              img {
+                width: 17px;
+                height: 17px;
+              }
+            }
+          }
+
+        }
+
+        .card4 {
+          margin-top: 15px;
+          width: 313px;
+          height: 510px;
+          border-radius: 8px;
+          background: rgb(239, 245, 255);
+
+          .button {
+            margin-top: 58px;
+            width: 65px;
+            height: 65px;
+            background: white;
+            margin-left: 48px;
+            border: 0;
+            border-radius: 50px;
+
+            .ava {
+              width: 40px;
+              height: 40px;
+            }
+          }
+
+          h2 {
+            margin-top: 14px;
+            margin-left: 48px;
+            color: rgb(248, 204, 11);
+            font-family: sans-serif;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 28.8px;
+            letter-spacing: 0;
+            text-align: left;
+          }
+
+          h3 {
+            margin-left: 48px;
+            margin-top: 17px;
+            color: rgb(141, 142, 146);
+            font-family: Open Sans;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0;
+            text-align: left;
+            width: 80%;
+          }
+
+          button {
+            margin-left: 48px;
+            margin-top: 35px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50px;
+            border: 0;
+
+            img {
+              width: 17px;
+              height: 17px;
+            }
+          }
+        }
+
+        .cen {
+          display: flex;
+          margin-top: 1%;
+          justify-content: center;
+        }
+      }
+
+    }
+
+    .why {
+      margin-top: 95px;
+      width: 100%;
+      display: flex;
+
+      .left {
+        background: rgb(248, 204, 11);
+
+        .why_item {
+          margin-left: 12%;
+          margin-top: 95px;
+          width: 679px;
+
+
+          .but {
+            width: 217px;
+            height: 34px;
+            box-sizing: border-box;
+            border: 2px solid white;
+            border-radius: 800px;
+            background: transparent;
+
+            color: rgb(239, 245, 255);
+            font-family: Open Sans;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0;
+            text-align: center;
+          }
+
+          h2 {
+            color: rgb(255, 255, 255);
+            font-family: sans-serif;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 48px;
+            letter-spacing: 0;
+            text-align: left;
+            margin-top: 16px;
+          }
+
+          h3 {
+            margin-top: 25px;
+            color: rgb(255, 255, 255);
+            font-family: Open Sans;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0;
+            text-align: left;
+            width: 574px;
+          }
+
+          .achievements {
+            margin-top: 31px;
+
+            .df1 {
+              display: flex;
+
+              .item1 {
+                display: flex;
+
+                button {
+                  width: 55px;
+                  height: 55px;
+                  background: white;
+                  border: 0;
+                  border-radius: 50px;
+
+                  img {
+                    width: 41px;
+                    height: 41px;
+                  }
+                }
+
+                p {
+                  color: rgb(255, 255, 255);
+                  font-family: sans-serif;
+                  font-size: 20px;
+                  font-weight: 400;
+                  line-height: 24px;
+                  text-align: left;
+                  margin-top: 15px;
+                  margin-left: 24px;
+                }
+
+
+              }
+
+              .item2 {
+                margin-left: 59px;
+                display: flex;
+
+                button {
+                  width: 55px;
+                  height: 55px;
+                  background: white;
+                  border: 0;
+                  border-radius: 50px;
+
+                  img {
+                    width: 41px;
+                    height: 41px;
+                  }
+                }
+
+                p {
+                  color: rgb(255, 255, 255);
+                  font-family: sans-serif;
+                  font-size: 20px;
+                  font-weight: 400;
+                  line-height: 24px;
+                  text-align: left;
+                  margin-top: 15px;
+                  margin-left: 24px;
+                }
+
+
+              }
+            }
+
+            .df2 {
+              margin-top: 24px;
+              display: flex;
+
+              .item1 {
+                display: flex;
+
+                button {
+                  width: 55px;
+                  height: 55px;
+                  background: white;
+                  border: 0;
+                  border-radius: 50px;
+
+                  img {
+                    width: 41px;
+                    height: 41px;
+                  }
+                }
+
+                p {
+                  color: rgb(255, 255, 255);
+                  font-family: sans-serif;
+                  font-size: 20px;
+                  font-weight: 400;
+                  line-height: 24px;
+                  text-align: left;
+                  margin-top: 15px;
+                  margin-left: 24px;
+                }
+
+
+              }
+
+              .item2 {
+                margin-left: 59px;
+                display: flex;
+
+                button {
+                  width: 55px;
+                  height: 55px;
+                  background: white;
+                  border: 0;
+                  border-radius: 50px;
+
+                  img {
+                    width: 41px;
+                    height: 41px;
+                  }
+                }
+
+                p {
+                  color: rgb(255, 255, 255);
+                  font-family: sans-serif;
+                  font-size: 20px;
+                  font-weight: 400;
+                  line-height: 24px;
+                  text-align: left;
+                  margin-top: 15px;
+                  margin-left: 24px;
+                }
+
+
+              }
+            }
+          }
+        }
+
+
+      }
+
+      .image-container {
+        width: 100%; /* Ширина контейнера занимает 100% от родителя */
+        height: 600px; /* Фиксированная высота контейнера */
+        overflow: hidden; /* Обрезает изображение, которое выходит за границы контейнера */
+
+        img {
+          width: 929px; /* Ширина изображения автоматически рассчитывается для сохранения пропорций */
+          height: 100%; /* Высота изображения занимает 100% высоты родительского контейнера */
+          display: block; /* Убирает лишние пробелы вокруг изображения */
+          object-fit: cover; /* Масштабирование изображения для заполнения контейнера без искажений */
+        }
+      }
+    }
+
+    .centere {
+      display: flex;
+      justify-content: center;
+
+      .relationship {
+
+        gap: 1%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        max-width: 990px;
+
+
+        .relation_left {
+          margin-top: 95px;
+          width: 50%;
+          margin-left: 1%;
+
+          button {
+            box-sizing: border-box;
+            border: 1px solid rgb(199, 220, 251);
+            border-radius: 800px;
+
+            color: rgb(141, 142, 146);
+            font-family: Open Sans;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0;
+            text-align: center;
+            width: 129px;
+            height: 34px;
+            background: transparent;
+          }
+        }
+
+        h2 {
+          color: rgb(27, 44, 81);
+          font-family: sans-serif;
+          font-size: 40px;
+          font-weight: 400;
+          line-height: 48px;
+          letter-spacing: 0;
+          text-align: left;
+          margin-top: 16px;
+        }
+
+        h3 {
+          width: 100%;
+          color: rgb(141, 142, 146);
+          font-family: Open Sans;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: 0;
+          text-align: left;
+          margin-top: 25px;
+        }
+
+        .rel1 {
+          margin-top: 23px;
+          width: 100%;
+          height: 152px;
+          border-radius: 8px;
+          background: rgb(239, 245, 255);
+          display: flex;
+
+          button {
+            width: 55px;
+            height: 55px;
+            background: white;
+            border: 0;
+            margin-top: 49px;
+            margin-left: 48px;
+
+            img {
+              width: 17px;
+              height: 17px;
+            }
+          }
+
+          .item1 {
+            margin-top: 48px;
+            margin-left: 24px;
+
+            p {
+              color: rgb(141, 142, 146);
+              font-family: Open Sans;
+              font-size: 15px;
+              font-weight: 400;
+              line-height: 24px;
+              text-align: left;
+            }
+
+            h2 {
+              color: rgb(27, 44, 81);
+              font-family: sans-serif;
+              font-size: 19px;
+              font-weight: 400;
+              line-height: 24px;
+              text-align: left;
+              margin-top: 8px;
+            }
+          }
+        }
+
+        .rel2 {
+          margin-top: 23px;
+          width: 100%;
+          height: 152px;
+          border-radius: 8px;
+          background: rgb(239, 245, 255);
+          display: flex;
+
+          button {
+            width: 55px;
+            height: 55px;
+            background: white;
+            border: 0;
+            margin-top: 49px;
+            margin-left: 48px;
+
+            img {
+              width: 17px;
+              height: 17px;
+            }
+          }
+
+          .item1 {
+            margin-top: 48px;
+            margin-left: 24px;
+
+            p {
+              color: rgb(141, 142, 146);
+              font-family: Open Sans;
+              font-size: 15px;
+              font-weight: 400;
+              line-height: 24px;
+              text-align: left;
+            }
+
+            h2 {
+              color: rgb(27, 44, 81);
+              font-family: sans-serif;
+              font-size: 19px;
+              font-weight: 400;
+              line-height: 24px;
+              text-align: left;
+              margin-top: 8px;
+            }
+          }
+        }
+
+        .relation_right {
+          margin-right: 1%;
+          margin-top: 95px;
+          width: 48%;
+          height: 546px;
+          border-radius: 8px;
+          background: rgb(239, 245, 255);
+
+          .center {
+            display: flex;
+            justify-content: center;
+
+            h2 {
+              margin-top: 51px;
+              color: rgb(248, 204, 11);
+            }
+
+            h3 {
+              color: rgb(141, 142, 146);
+              font-family: Open Sans;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 24px;
+              text-align: center;
+              width: 97%;
+            }
+          }
+
+          .df {
+            display: flex;
+            justify-content: center;
+            gap: 1%;
+            margin-top: 50px;
+
+            input {
+              width: 220px;
+              height: 55px;
+              box-sizing: border-box;
+              border: 1.6px solid rgb(238, 238, 238);
+              border-radius: 12px;
+              text-align: left;
+              padding: 12px 43px;
+              color: black;
+              font-family: sans-serif;
+              font-size: 16px;
+            }
+
+            .input::placeholder {
+              color: rgba(51, 51, 51, 0.4);
+              font-family: sans-serif;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 16px;
+              text-align: left;
+            }
+          }
+
+          .center {
+            display: flex;
+            justify-content: center;
+            margin-top: 16px;
+
+            button {
+              box-sizing: border-box;
+              border: 1px solid rgb(248, 204, 11);
+              border-radius: 8px;
+
+              background: rgb(248, 204, 11);
+              width: 95%;
+              height: 58px;
+
+              color: rgb(255, 255, 255);
+              font-family: Open Sans;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 24px;
+              text-align: center;
+            }
+          }
+
+        }
+      }
+
+
+    }
+  }
+
+  footer {
+    margin-top: 100px;
+    width: 100%;
+    background: rgb(196, 160, 7);
+
+    .df1 {
+      display: flex;
+      gap: 10%;
+      padding-top: 96px;
+      margin-left: 10%;
+
+      .item1 {
+        width: 33%;
+
+        h2 {
+          color: rgb(239, 245, 255);
+          font-family: sans-serif;
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 24px;
+          letter-spacing: 0;
+          text-align: left;
+          margin-bottom: 24px;
+        }
+
+        .df {
+          display: flex;
+          margin-top: 8px;
+
+          .one {
+            margin-left: 5px;
+          }
+
+          svg {
+            width: 21px;
+            height: 21px;
+          }
+
+
+          p {
+            color: rgb(239, 245, 255);
+            font-family: Open Sans;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0;
+            text-align: left;
+            gap: 16px;
+            margin-left: 10px;
+          }
+        }
+
+        .dff {
+          margin-top: 23px;
+          display: flex;
+          gap: 5px;
+
+          .lg {
+            box-sizing: border-box;
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 50px;
+            background: transparent;
+            width: 35px;
+            height: 35px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+
+          }
+
+        }
+      }
+
+      .item2 {
+        width: 30%;
+
+        h2 {
+          color: rgb(239, 245, 255);
+          font-family: sans-serif;
+          font-size: 19px;
+          font-weight: 600;
+          line-height: 24px;
+          letter-spacing: 0;
+          text-align: left;
+          margin-bottom: 25px;
+        }
+
+        .df {
+          display: flex;
+          gap: 7px;
+          margin-top: 7px;
+
+          p {
+            color: rgb(255, 255, 255);
+            font-family: Open Sans;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 22.5px;
+            letter-spacing: 0;
+            text-align: left;
+            text-transform: capitalize;
+            margin-top: -5px;
+          }
+        }
+      }
+
+      .item3 {
+        width: 50%;
+
+        h2 {
+          color: rgb(239, 245, 255);
+          font-family: sans-serif;
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 24px;
+          letter-spacing: 0;
+          text-align: left;
+        }
+
+        h3 {
+          margin-top: 25px;
+          color: rgb(239, 245, 255);
+          font-family: sans-serif;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: 0;
+          text-align: left;
+          width: 259px;
+        }
+      }
+
+    }
+
+    .center {
+      display: flex;
+      justify-content: center;
+
+      hr {
+        width: 72.5%;
+        height: 1px;
+        background: white;
+        border: 0;
+        margin-top: 80px;
+      }
+    }
+
+    .df2 {
+      gap: 39%;
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 10px;
+
+      p {
+        color: rgb(0, 0, 0);
+        font-family: Open Sans;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22.5px;
+        letter-spacing: 0;
+        text-align: left;
+
+        span {
+          color: white;
+        }
+
+        .name {
+          color: white;
+        }
+      }
+
+      .design {
+      }
+    }
+  }
+
+}
+
+@media screen and (min-width: 1271px) and (max-width: 9999px) {
+
+  header {
+    width: 100%;
+    height: 834px;
+    background: rgb(248, 204, 11);
+
+
+    nav {
+      opacity: 90%;
+      width: 100%;
+      height: 108px;
+      background: rgb(248, 204, 11);
+      display: flex;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+
+      img {
+        width: 144px;
+        height: 53px;
+        margin-left: 49px;
+      }
+
+      p {
+        margin-right: 51px;
+        color: rgb(12, 30, 52);
+        font-family: sans-serif;
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 33px;
+        letter-spacing: 0;
+        text-align: left;
+      }
+    }
+
+    .image-container {
+      width: 100%; /* Ширина контейнера занимает 100% от родителя */
+      height: 250px; /* Фиксированная высота контейнера */
+      overflow: hidden; /* Обрезает изображение, которое выходит за границы контейнера */
+
+      img {
+        width: 100%; /* Ширина изображения автоматически рассчитывается для сохранения пропорций */
+        height: 100%; /* Высота изображения занимает 100% высоты родительского контейнера */
+        display: block; /* Убирает лишние пробелы вокруг изображения */
+        object-fit: cover; /* Масштабирование изображения для заполнения контейнера без искажений */
+      }
+    }
+
+    h1 {
+      margin-left: 48px;
+      margin-top: 48px;
+      color: rgb(255, 255, 255);
+      font-family: sans-serif;
+      font-size: 56px;
+      font-weight: 600;
+      line-height: 67.2px;
+      letter-spacing: 0;
+      text-align: left;
+      width: 700px;
+    }
+
+    .header_components {
+      display: flex;
+
+      .hr {
+        display: flex;
+        margin-left: 67px;
+        margin-top: 50px;
+
+        hr {
+          /* Rectangle */
+          width: 1px;
+          height: 90.39px;
+          border: 0;
+          background: rgb(239, 245, 255);
+        }
+
+        .hr2 {
+          /* Rectangle */
+          width: 1px;
+          height: 66.39px;
+          border: 0;
+          background: rgb(239, 245, 255);
+        }
+
+        .solve {
+          margin-left: 25px;
+
+          h2 {
+            color: rgb(255, 255, 255);
+            font-family: sans-serif;
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 38.4px;
+            letter-spacing: 0;
+            text-align: left;
+          }
+
+          h3 {
+            color: rgb(239, 245, 255);
+            font-family: sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0;
+            text-align: left;
+            margin-top: 5px;
+            width: 200px;
+          }
+
+          button {
+            width: 171px;
+            height: 57px;
+            margin-top: 16px;
+            margin-left: -25px;
+            box-sizing: border-box;
+            border: 1px solid rgb(252, 255, 101);
+            border-radius: 800px;
+            background: rgb(255, 255, 255);
+            color: rgb(206, 210, 0);
+            font-family: Open Sans;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 22.5px;
+            letter-spacing: 0;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+  }
+
+  section {
+    width: 100%;
+
+    .nas {
+
+      .df_elements {
+        display: flex;
+
+        .img1 {
+          box-sizing: border-box;
+          border-radius: 23px;
+          width: 23%;
+          height: 100%;
+          margin-top: 277px;
+          margin-left: 7%;
+          z-index: 1;
+        }
+
+        .img2 {
+          width: 27%;
+          height: 100%;
+          margin-left: -63px;
+          margin-top: 95px;
+        }
+
+        .section__items {
+          margin-top: 96px;
+          margin-left: 96px;
+
+          .about {
+            box-sizing: border-box;
+            border: 1px solid rgb(248, 204, 11);
+            border-radius: 800px;
+            width: 92px;
+            height: 34px;
+            background: transparent;
+            color: rgb(248, 204, 11);
+            font-family: sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: center;
+          }
+
+          h2 {
+            margin-top: 2%;
+            color: rgb(248, 204, 11);
+            font-family: sans-serif;
+            font-size: 2vw;
+            line-height: 123%;
+            letter-spacing: 0;
+            text-align: left;
+            width: 59%;
+          }
+
+          h3 {
+            margin-top: 2%;
+            color: rgb(141, 142, 146);
+            font-family: Open Sans;
+            font-size: 1vw;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0;
+            text-align: left;
+            width: 77%;
+          }
+
+          .items {
+            margin-top: 23px;
+
+            .item {
+              gap: 15px;
+              margin-top: 2%;
+              display: flex;
+              color: rgb(141, 142, 146);
+              font-family: Open Sans;
+              font-size: 16px;
+              text-align: left;
+
+              p {
+                font-size: 0.8vw;
+                margin-top: -2px;
+              }
+            }
+
+            button {
+              font-size: 1vw;
+              box-sizing: border-box;
+              border: 1px solid rgb(248, 204, 11);
+              border-radius: 800px;
+
+              background: rgb(248, 204, 11);
+              width: 28%;
+              height: 58px;
+              margin-top: 4%;
+              color: rgb(255, 255, 255);
+              font-family: Open Sans;
+              font-weight: 600;
+              line-height: 24px;
+              letter-spacing: 0;
+              text-align: center;
+            }
+
+
+          }
+        }
+      }
+
+    }
+
+    .uslugi {
+      width: 100%;
+      margin-top: 96px;
+
+      .centerr {
+        justify-content: center;
+        display: flex;
+
+        button {
+          box-sizing: border-box;
+          border: 1px solid rgb(248, 204, 11);
+          border-radius: 800px;
+          width: 101px;
+          height: 34px;
+          background: transparent;
+
+          color: rgb(248, 204, 11);
+          font-family: Open Sans;
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: 0;
+          text-align: center;
+        }
+
+        .h2 {
+          margin-top: 15px;
+          color: rgb(248, 204, 11);
+          font-family: sans-serif;
+          font-size: 40px;
+          font-weight: 600;
+          line-height: 48px;
+          letter-spacing: 0;
+          text-align: center;
+        }
+      }
+
+      .center {
+        justify-content: center;
+
+        .df {
+          margin-top: 50px;
+          justify-content: center;
+          align-items: center;
+          display: flex;
+          gap: 1%;
+
+          .card {
+            /* Rectangle */
+            width: 408px;
+            height: 510px;
+            border-radius: 8px;
+            background: rgb(239, 245, 255);
+
+            .button {
+              width: 65px;
+              height: 65px;
+              background: white;
+              margin-top: 58px;
+              margin-left: 48px;
+              border: 0;
+              border-radius: 50px;
+
+              .ava {
+                width: 40px;
+                height: 40px;
+              }
+            }
+
+            h2 {
+              margin-top: 14px;
+              margin-left: 48px;
+              color: rgb(248, 204, 11);
+              font-family: sans-serif;
+              font-size: 24px;
+              font-weight: 400;
+              line-height: 28.8px;
+              letter-spacing: 0;
+              text-align: left;
+            }
+
+            h3 {
+              margin-left: 48px;
+              margin-top: 17px;
+              color: rgb(141, 142, 146);
+              font-family: Open Sans;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 24px;
+              letter-spacing: 0;
+              text-align: left;
+              width: 310px;
+            }
+
+            button {
+              margin-left: 48px;
+              margin-top: 35px;
+              width: 40px;
+              height: 40px;
+              border-radius: 50px;
+              border: 0;
+
+              img {
+                width: 17px;
+                height: 17px;
+              }
+            }
+          }
+        }
+
+        .card4 {
+          /* Rectangle */
+          width: 408px;
+          height: 510px;
+          border-radius: 8px;
+          background: rgb(239, 245, 255);
+
+          .button {
+            width: 65px;
+            height: 65px;
+            background: white;
+            margin-top: 58px;
+            margin-left: 48px;
+            border: 0;
+            border-radius: 50px;
+
+            .ava {
+              width: 40px;
+              height: 40px;
+            }
+          }
+
+          h2 {
+            margin-top: 14px;
+            margin-left: 48px;
+            color: rgb(248, 204, 11);
+            font-family: sans-serif;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 28.8px;
+            letter-spacing: 0;
+            text-align: left;
+          }
+
+          h3 {
+            margin-left: 48px;
+            margin-top: 17px;
+            color: rgb(141, 142, 146);
+            font-family: Open Sans;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0;
+            text-align: left;
+            width: 310px;
+          }
+
+          button {
+            margin-left: 48px;
+            margin-top: 35px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50px;
+            border: 0;
+
+            img {
+              width: 17px;
+              height: 17px;
+            }
+          }
+        }
+
+        .cen {
+          display: flex;
+          margin-top: 1%;
+          justify-content: center;
+        }
+      }
+
+    }
+
+    .why {
+      margin-top: 95px;
+      width: 100%;
+      display: flex;
+
+      .left {
+        background: rgb(248, 204, 11);
+        width: 107%;
+
+        .why_item {
+          margin-left: 12%;
+          margin-top: 95px;
+          width: 679px;
+
+
+          .but {
+            width: 217px;
+            height: 34px;
+            box-sizing: border-box;
+            border: 2px solid white;
+            border-radius: 800px;
+            background: transparent;
+
+            color: rgb(239, 245, 255);
+            font-family: Open Sans;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0;
+            text-align: center;
+          }
+
+          h2 {
+            color: rgb(255, 255, 255);
+            font-family: sans-serif;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 48px;
+            letter-spacing: 0;
+            text-align: left;
+            margin-top: 16px;
+          }
+
+          h3 {
+            margin-top: 25px;
+            color: rgb(255, 255, 255);
+            font-family: Open Sans;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0;
+            text-align: left;
+            width: 574px;
+          }
+
+          .achievements {
+            margin-top: 31px;
+
+            .df1 {
+              display: flex;
+
+              .item1 {
+                display: flex;
+
+                button {
+                  width: 55px;
+                  height: 55px;
+                  background: white;
+                  border: 0;
+                  border-radius: 50px;
+
+                  img {
+                    width: 41px;
+                    height: 41px;
+                  }
+                }
+
+                p {
+                  color: rgb(255, 255, 255);
+                  font-family: sans-serif;
+                  font-size: 20px;
+                  font-weight: 400;
+                  line-height: 24px;
+                  text-align: left;
+                  margin-top: 15px;
+                  margin-left: 24px;
+                }
+
+
+              }
+
+              .item2 {
+                margin-left: 59px;
+                display: flex;
+
+                button {
+                  width: 55px;
+                  height: 55px;
+                  background: white;
+                  border: 0;
+                  border-radius: 50px;
+
+                  img {
+                    width: 41px;
+                    height: 41px;
+                  }
+                }
+
+                p {
+                  color: rgb(255, 255, 255);
+                  font-family: sans-serif;
+                  font-size: 20px;
+                  font-weight: 400;
+                  line-height: 24px;
+                  text-align: left;
+                  margin-top: 15px;
+                  margin-left: 24px;
+                }
+
+
+              }
+            }
+
+            .df2 {
+              margin-top: 24px;
+              display: flex;
+
+              .item1 {
+                display: flex;
+
+                button {
+                  width: 55px;
+                  height: 55px;
+                  background: white;
+                  border: 0;
+                  border-radius: 50px;
+
+                  img {
+                    width: 41px;
+                    height: 41px;
+                  }
+                }
+
+                p {
+                  color: rgb(255, 255, 255);
+                  font-family: sans-serif;
+                  font-size: 20px;
+                  font-weight: 400;
+                  line-height: 24px;
+                  text-align: left;
+                  margin-top: 15px;
+                  margin-left: 24px;
+                }
+
+
+              }
+
+              .item2 {
+                margin-left: 59px;
+                display: flex;
+
+                button {
+                  width: 55px;
+                  height: 55px;
+                  background: white;
+                  border: 0;
+                  border-radius: 50px;
+
+                  img {
+                    width: 41px;
+                    height: 41px;
+                  }
+                }
+
+                p {
+                  color: rgb(255, 255, 255);
+                  font-family: sans-serif;
+                  font-size: 20px;
+                  font-weight: 400;
+                  line-height: 24px;
+                  text-align: left;
+                  margin-top: 15px;
+                  margin-left: 24px;
+                }
+
+
+              }
+            }
+          }
+        }
+
+
+      }
+
+      .image-container {
+        width: 100%; /* Ширина контейнера занимает 100% от родителя */
+        height: 600px; /* Фиксированная высота контейнера */
+        overflow: hidden; /* Обрезает изображение, которое выходит за границы контейнера */
+
+        img {
+          width: 929px; /* Ширина изображения автоматически рассчитывается для сохранения пропорций */
+          height: 100%; /* Высота изображения занимает 100% высоты родительского контейнера */
+          display: block; /* Убирает лишние пробелы вокруг изображения */
+          object-fit: cover; /* Масштабирование изображения для заполнения контейнера без искажений */
+        }
+      }
+    }
+
+    .relationship {
+      gap: 1%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      .relation_left {
+        margin-top: 95px;
+
+        button {
+          box-sizing: border-box;
+          border: 1px solid rgb(199, 220, 251);
+          border-radius: 800px;
+
+          color: rgb(141, 142, 146);
+          font-family: Open Sans;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: 0;
+          text-align: center;
+          width: 129px;
+          height: 34px;
+          background: transparent;
+        }
+      }
+
+      h2 {
+        color: rgb(27, 44, 81);
+        font-family: sans-serif;
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 48px;
+        letter-spacing: 0;
+        text-align: left;
+        margin-top: 16px;
+      }
+
+      h3 {
+        color: rgb(141, 142, 146);
+        font-family: Open Sans;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0;
+        text-align: left;
+        width: 590px;
+        margin-top: 25px;
+      }
+
+      .rel1 {
+        margin-top: 23px;
+        width: 612px;
+        height: 152px;
+        border-radius: 8px;
+        background: rgb(239, 245, 255);
+        display: flex;
+
+        button {
+          width: 55px;
+          height: 55px;
+          background: white;
+          border: 0;
+          margin-top: 49px;
+          margin-left: 48px;
+
+          img {
+            width: 17px;
+            height: 17px;
+          }
+        }
+
+        .item1 {
+          margin-top: 48px;
+          margin-left: 24px;
+
+          p {
+            color: rgb(141, 142, 146);
+            font-family: Open Sans;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: left;
+          }
+
+          h2 {
+            color: rgb(27, 44, 81);
+            font-family: sans-serif;
+            font-size: 19px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: left;
+            margin-top: 8px;
+          }
+        }
+      }
+
+      .rel2 {
+        margin-top: 23px;
+        width: 612px;
+        height: 152px;
+        border-radius: 8px;
+        background: rgb(239, 245, 255);
+        display: flex;
+
+        button {
+          width: 55px;
+          height: 55px;
+          background: white;
+          border: 0;
+          margin-top: 49px;
+          margin-left: 48px;
+
+          img {
+            width: 17px;
+            height: 17px;
+          }
+        }
+
+        .item1 {
+          margin-top: 48px;
+          margin-left: 24px;
+
+          p {
+            color: rgb(141, 142, 146);
+            font-family: Open Sans;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: left;
+          }
+
+          h2 {
+            color: rgb(27, 44, 81);
+            font-family: sans-serif;
+            font-size: 19px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: left;
+            margin-top: 8px;
+          }
+        }
+      }
+
+      .relation_right {
+        margin-top: 95px;
+        width: 612px;
+        height: 546px;
+        border-radius: 8px;
+        background: rgb(239, 245, 255);
+
+        .center {
+          display: flex;
+          justify-content: center;
+
+          h2 {
+            margin-top: 51px;
+            color: rgb(248, 204, 11);
+          }
+
+          h3 {
+            color: rgb(141, 142, 146);
+            font-family: Open Sans;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: center;
+            width: 519px;
+          }
+        }
+
+        .df {
+          display: flex;
+          justify-content: center;
+          gap: 16px;
+          margin-top: 50px;
+
+          input {
+            width: 250px;
+            height: 55px;
+            box-sizing: border-box;
+            border: 1.6px solid rgb(238, 238, 238);
+            border-radius: 12px;
+            text-align: left;
+            padding: 12px 43px;
+            color: black;
+            font-family: sans-serif;
+            font-size: 16px;
+          }
+
+          .input::placeholder {
+            color: rgba(51, 51, 51, 0.4);
+            font-family: sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 16px;
+            text-align: left;
+          }
+        }
+
+        .center {
+          display: flex;
+          justify-content: center;
+          margin-top: 16px;
+
+          button {
+            box-sizing: border-box;
+            border: 1px solid rgb(248, 204, 11);
+            border-radius: 8px;
+
+            background: rgb(248, 204, 11);
+            width: 516px;
+            height: 58px;
+
+            color: rgb(255, 255, 255);
+            font-family: Open Sans;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: center;
+          }
+        }
+
+      }
+    }
+  }
+
+  footer {
+    margin-top: 100px;
+    width: 100%;
+    background: rgb(196, 160, 7);
+
+    .df1 {
+      display: flex;
+      gap: 120px;
+      margin-left: 16%;
+      padding-top: 96px;
+
+      .item1 {
+        h2 {
+          color: rgb(239, 245, 255);
+          font-family: sans-serif;
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 24px;
+          letter-spacing: 0;
+          text-align: left;
+          margin-bottom: 24px;
+        }
+
+        .df {
+          display: flex;
+          margin-top: 8px;
+
+          .one {
+            margin-left: 5px;
+          }
+
+          svg {
+            width: 21px;
+            height: 21px;
+          }
+
+
+          p {
+            color: rgb(239, 245, 255);
+            font-family: Open Sans;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0;
+            text-align: left;
+            gap: 16px;
+            margin-left: 10px;
+          }
+        }
+
+        .dff {
+          margin-top: 23px;
+          display: flex;
+          gap: 5px;
+
+          .lg {
+            box-sizing: border-box;
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 50px;
+            background: transparent;
+            width: 35px;
+            height: 35px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+
+          }
+
+        }
+      }
+
+      .item2 {
+
+        h2 {
+          color: rgb(239, 245, 255);
+          font-family: sans-serif;
+          font-size: 19px;
+          font-weight: 600;
+          line-height: 24px;
+          letter-spacing: 0;
+          text-align: left;
+          margin-bottom: 25px;
+        }
+
+        .df {
+          display: flex;
+          gap: 7px;
+          margin-top: 7px;
+
+          p {
+            color: rgb(255, 255, 255);
+            font-family: Open Sans;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 22.5px;
+            letter-spacing: 0;
+            text-align: left;
+            text-transform: capitalize;
+            margin-top: -5px;
+          }
+        }
+      }
+
+      .item3 {
+
+        h2 {
+          color: rgb(239, 245, 255);
+          font-family: sans-serif;
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 24px;
+          letter-spacing: 0;
+          text-align: left;
+        }
+
+        h3 {
+          margin-top: 25px;
+          color: rgb(239, 245, 255);
+          font-family: sans-serif;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: 0;
+          text-align: left;
+          width: 259px;
+        }
+      }
+
+    }
+
+    .center {
+
+      hr {
+        margin-left: 16%;
+        width: 72.5%;
+        height: 1px;
+        background: white;
+        border: 0;
+        margin-top: 80px;
+      }
+    }
+
+    .df2 {
+      margin-top: 10px;
+      display: flex;
+      margin-left: 16%;
+      padding-bottom: 10px;
+
+      p {
+        color: rgb(0, 0, 0);
+        font-family: Open Sans;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22.5px;
+        letter-spacing: 0;
+        text-align: left;
+
+        span {
+          color: white;
+        }
+
+        .name {
+          color: white;
+        }
+      }
+
+      .design {
+        margin-left: 56%;
+      }
+    }
+  }
+
+}
+
