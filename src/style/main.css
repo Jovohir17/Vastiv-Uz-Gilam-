@@ -1495,7 +1495,6 @@ nav {
     justify-content: center;
   }
   section .why {
-    height: 700px;
     margin-top: 95px;
     width: 100%;
     display: flex;
@@ -1504,9 +1503,9 @@ nav {
     background: rgb(248, 204, 11);
   }
   section .why .left .why_item {
+    width: 90%;
     margin-top: 40px;
     margin-left: 10%;
-    width: 104%;
   }
   section .why .left .why_item .but {
     width: 217px;
@@ -1634,6 +1633,7 @@ nav {
     margin-top: 15px;
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
   }
   section .why .left .why_item .achievements .df2 .item2 button {
     width: 55px;
@@ -1645,7 +1645,6 @@ nav {
   section .why .left .why_item .achievements .df2 .item2 button img {
     width: 41px;
     height: 41px;
-    margin-bottom: 15px;
   }
   section .why .left .why_item .achievements .df2 .item2 p {
     color: rgb(255, 255, 255);
@@ -1657,6 +1656,7 @@ nav {
     margin-left: 24px;
   }
   section .why .image-container {
+    display: none;
     width: 100%; /* Ширина контейнера занимает 100% от родителя */
     height: 700px; /* Фиксированная высота контейнера */
     overflow: hidden; /* Обрезает изображение, которое выходит за границы контейнера */

@@ -1750,7 +1750,6 @@ nav {
     }
 
     .why {
-      height: 700px;
       margin-top: 95px;
       width: 100%;
       display: flex;
@@ -1759,9 +1758,9 @@ nav {
         background: rgb(248, 204, 11);
 
         .why_item {
+          width: 90%;
           margin-top: 40px;
           margin-left: 10%;
-          width: 104%;
 
 
           .but {
@@ -1913,6 +1912,8 @@ nav {
                 margin-top: 15px;
                 display: flex;
                 align-items: center;
+                margin-bottom: 20px;
+
 
                 button {
                   width: 55px;
@@ -1921,10 +1922,10 @@ nav {
                   border: 0;
                   border-radius: 50px;
 
+
                   img {
                     width: 41px;
                     height: 41px;
-                    margin-bottom: 15px;
                   }
                 }
 
@@ -1946,6 +1947,7 @@ nav {
       }
 
       .image-container {
+        display: none;
         width: 100%; /* Ширина контейнера занимает 100% от родителя */
         height: 700px;; /* Фиксированная высота контейнера */
         overflow: hidden; /* Обрезает изображение, которое выходит за границы контейнера */
